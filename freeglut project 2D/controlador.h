@@ -6,6 +6,9 @@
 *																				*
 *********************************************************************************/
 
+#ifndef CONTROLADOR_H
+#define CONTROLADOR_H
+
 #include <Windows.h>
 #include <gl/GL.h>
 #include <gl/GLU.h>
@@ -21,3 +24,4 @@ public:
 	static void key (int,int,int,int);
 	
 };
+#endif

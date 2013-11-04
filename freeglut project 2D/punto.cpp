@@ -50,3 +50,4 @@ punto punto :: perpendicularDerecha()
 {
 	return punto (y,-x);
 }
+

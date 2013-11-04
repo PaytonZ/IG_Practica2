@@ -7,6 +7,7 @@
 *********************************************************************************/
 
 
+
 #ifndef ESCENA_H
 #define ESCENA_H
 
@@ -14,6 +15,7 @@
 #include "punto.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
+#include "pelota.h"
 
 
 
@@ -27,10 +29,11 @@ public:
 
 
 	bool baldosas;
-
-
+	
 	static escena* getAVEInstance();
 	static escena* getAVEInstance(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop);
+
+	
 		
 	GLdouble getxRight() const;
 	void setxRight(GLdouble);
@@ -52,7 +55,6 @@ public:
 	void translacionY(GLdouble);
 	void escalacion(GLdouble);
 
-	
 
 	void draw();
 
@@ -69,6 +71,10 @@ public:
 
 	void activarDesActivarBaldosas();
 
+
+
+
+
 private:
 
 	escena() {}
@@ -77,8 +83,6 @@ private:
 
 	static escena* AVE;
 	static void _AVE_deleter() { delete AVE; }
-
-	//arbol arbol_pitagoras;
 
 	GLdouble xLeft;
 	GLdouble xRight;

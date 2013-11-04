@@ -9,8 +9,6 @@
 #ifndef PUNTO_H
 #define PUNTO_H
 
-
-
 #include <Windows.h>
 #include <gl/GL.h>
 #include <gl/GLU.h>
@@ -31,11 +29,19 @@ public:
 	void y(GLdouble);
 	*/
 	punto& operator = (const punto &p);
+	
 	GLdouble distancia(punto);
 	bool estaCerca(punto,GLdouble);
 	punto generaVector(punto);
 	GLdouble productoEscalar (punto);
+	
 	punto perpendicularDerecha();
+	punto perpendicularIzquierda();
+
+	punto normalizarVector(punto vector);
+
+
+
 
 };
 

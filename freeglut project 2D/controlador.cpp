@@ -94,11 +94,7 @@ void controlador:: key(int button, int state, int x, int y)
 
 	bool need_redisplay = true;
 
-	switch(button)
-	{
 	
-		break;
-	}
 	if (need_redisplay)
 	{
 		glutPostRedisplay();

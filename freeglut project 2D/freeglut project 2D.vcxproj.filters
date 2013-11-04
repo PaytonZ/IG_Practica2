@@ -27,6 +27,9 @@
     <ClCompile Include="controlador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pelota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="escena.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="controlador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pelota.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

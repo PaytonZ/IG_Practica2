@@ -89,7 +89,7 @@ int main(int argc, char *argv[]){
 	glutInit(&argc, argv);
 
 	//Window construction
-	my_window = glutCreateWindow( "IG Practica 1 - Pythagoras tree" );
+	my_window = glutCreateWindow( "IG Practica 2 - Pelota Maligna :@" );
 
 	//Callback registration
 	glutReshapeFunc(escena::resize);
