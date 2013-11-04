@@ -1,5 +1,5 @@
 #include "pelota.h"
-#include <math.h>
+#include <cmath>
 
 	void pelota::pintar()
 	{

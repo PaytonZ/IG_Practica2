@@ -39,7 +39,7 @@ public:
 	punto perpendicularIzquierda();
 
 	punto normalizarVector(punto vector);
-
+	
 
 
 

@@ -59,7 +59,7 @@ punto escena::getCentro()
 }	
 
 
-void __cdecl  escena::resize(int newWidth, int newHeight){
+void escena::resize(int newWidth, int newHeight){
 
 	//Resize Viewport
 	WIDTH= newWidth;
@@ -214,9 +214,9 @@ void escena::display()
 {
 	glClear( GL_COLOR_BUFFER_BIT );
 
-
-	if(AVE->baldosas) AVE->embaldosar(3);
-	else AVE->drawEscene();
+	punto c=escena::getAVEInstance()->getCentro();
+	pelota p = pelota(c,c,20);
+	p.pintar();
 	
 
 	glFlush();

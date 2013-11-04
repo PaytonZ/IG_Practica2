@@ -11,11 +11,13 @@
 #ifndef ESCENA_H
 #define ESCENA_H
 
+
+#include "pelota.h"
 #include <Windows.h>
 #include "punto.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
-#include "pelota.h"
+
 
 
 
@@ -27,6 +29,7 @@ class escena
 
 public:
 
+	
 
 	bool baldosas;
 	
@@ -83,6 +86,9 @@ private:
 
 	static escena* AVE;
 	static void _AVE_deleter() { delete AVE; }
+
+
+
 
 	GLdouble xLeft;
 	GLdouble xRight;

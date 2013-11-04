@@ -2,13 +2,10 @@
 #ifndef PELOTA_H
 #define PELOTA_H
 
-const int SEGMENTOS_CIRCULO=50;
+const int SEGMENTOS_CIRCULO=200;
 
 #include "punto.h"
 #include "escena.h"
-
-
-
 
 class pelota
 {
@@ -27,6 +24,8 @@ public:
 		direccion = punto(1,0);
 
 	}*/
+
+	pelota(){}
 	pelota(punto _centro,punto _direccion, GLdouble _radio) : centro(_centro), direccion(_direccion) , radio(_radio){}
 
 	void pintar();

@@ -1,24 +1,22 @@
-﻿Compilación iniciada a las 04/11/2013 14:45:50.
-     1>Proyecto "C:\Users\usuario_local\Documents\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
+﻿Compilación iniciada a las 04/11/2013 17:17:20.
+     1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\software\programacion\MSVStudio2012\VC\bin\CL.exe /c /IC:\Users\usuario_local\Documents\GitHub\IG_Practica2\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt controlador.cpp escena.cpp main.cpp pelota.cpp
+         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt controlador.cpp escena.cpp main.cpp pelota.cpp
          pelota.cpp
-     1>c:\users\usuario_local\documents\github\ig_practica2\freeglut project 2d\escena.h(38): error C2146: error de sintaxis : falta ';' delante del identificador 'p'
-     1>c:\users\usuario_local\documents\github\ig_practica2\freeglut project 2d\escena.h(38): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
-     1>c:\users\usuario_local\documents\github\ig_practica2\freeglut project 2d\pelota.cpp(14): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
-     1>c:\users\usuario_local\documents\github\ig_practica2\freeglut project 2d\pelota.cpp(15): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
-     1>c:\users\usuario_local\documents\github\ig_practica2\freeglut project 2d\pelota.cpp(17): warning C4244: 'argumento' : conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
-         Generando código...
-         Compilando...
-         controlador.cpp
-         Generando código...
-         Compilando...
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\escena.h(32): error C3531: 'pel': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\pelota.cpp(14): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\pelota.cpp(15): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\pelota.cpp(17): warning C4244: 'argumento' : conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
          main.cpp
-     1>c:\users\usuario_local\documents\github\ig_practica2\freeglut project 2d\main.cpp(35): warning C4305: 'argumento' : truncamiento de 'double' a 'GLfloat'
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\escena.h(32): error C3531: 'pel': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\main.cpp(35): warning C4305: 'argumento' : truncamiento de 'double' a 'GLfloat'
          escena.cpp
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\escena.h(32): error C3531: 'pel': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
+         controlador.cpp
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\escena.h(32): error C3531: 'pel': un símbolo cuyo tipo contiene 'auto' debe tener un inicializador
          Generando código...
-     1>Compilación del proyecto terminada "C:\Users\usuario_local\Documents\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Build destinos) -- ERROR.
+     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Build destinos) -- ERROR.
 
 ERROR al compilar.
 
-Tiempo transcurrido 00:00:02.73
+Tiempo transcurrido 00:00:03.03
