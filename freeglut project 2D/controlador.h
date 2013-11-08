@@ -6,6 +6,8 @@
 *																				*
 *********************************************************************************/
 
+
+#pragma once
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
 

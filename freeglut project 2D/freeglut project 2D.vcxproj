@@ -124,13 +124,13 @@
     <ClCompile Include="escena.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pelota.cpp" />
-    <ClCompile Include="punto.cpp" />
+    <ClCompile Include="PV2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controlador.h" />
     <ClInclude Include="escena.h" />
     <ClInclude Include="pelota.h" />
-    <ClInclude Include="punto.h" />
+    <ClInclude Include="PV2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

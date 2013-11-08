@@ -53,9 +53,9 @@ void escena::setyBot(GLdouble new_ybot )
 	yBot=new_ybot;
 }
 
-punto escena::getCentro()
+PV2D escena::getCentro()
 {
-	return punto((xRight+xLeft)/2.0,(yTop+yBot)/2.0);
+	return PV2D((xRight+xLeft)/2.0,(yTop+yBot)/2.0);
 }	
 
 
@@ -140,7 +140,7 @@ void escena::translacionY(GLdouble incremento){
 
 void escena::escalacion(GLdouble factor){
 
-	punto centro=getCentro();
+	PV2D centro=getCentro();
 	GLdouble nuevoancho = (xRight - xLeft) / factor;
 	GLdouble nuevoalto = (yTop-yBot) / factor ;
 
@@ -162,7 +162,7 @@ void escena:: draw()
 	
 }
 
-punto escena::dePuertodeVistaaAVE (int x ,int y )
+PV2D escena::dePuertodeVistaaAVE (int x ,int y )
 {
 
 
@@ -171,7 +171,7 @@ punto escena::dePuertodeVistaaAVE (int x ,int y )
 	GLdouble escalaAlto = HEIGHT /( yTop -yBot); 
 
 
-	return punto( (x/escalaAncho) + xLeft,yTop - (y/escalaAlto)) ;
+	return PV2D( (x/escalaAncho) + xLeft,yTop - (y/escalaAlto)) ;
 } 
 
 void escena::escalacionProgresivo(GLdouble factor)
@@ -189,7 +189,7 @@ void escena::escalacionProgresivo(GLdouble factor)
 		GLdouble anchonew = ancho / faux;
 		GLdouble altonew = alto / faux;
 
-		punto c= getCentro();
+		PV2D c= getCentro();
 		xLeft= c.x - anchonew / 2.0;
 		xRight= c.x + anchonew / 2.0;
 
@@ -214,7 +214,7 @@ void escena::display()
 {
 	glClear( GL_COLOR_BUFFER_BIT );
 
-	punto c=escena::getAVEInstance()->getCentro();
+	PV2D c=escena::getAVEInstance()->getCentro();
 	pelota p = pelota(c,c,20);
 	p.pintar();
 	

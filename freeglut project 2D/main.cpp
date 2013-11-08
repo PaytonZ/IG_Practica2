@@ -5,7 +5,7 @@
 *					Juan Luis Perez Valbuena									*
 *																				*
 *********************************************************************************/
-
+#include "pelota.h"
 #include <Windows.h>
 #include <gl/GL.h>
 #include <gl/GLU.h>

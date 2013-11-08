@@ -21,13 +21,13 @@
     <ClCompile Include="escena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="punto.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="controlador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pelota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PV2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,13 +35,13 @@
     <ClInclude Include="escena.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="punto.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="controlador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pelota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PV2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

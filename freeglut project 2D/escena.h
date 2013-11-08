@@ -8,13 +8,14 @@
 
 
 
+#pragma once
 #ifndef ESCENA_H
 #define ESCENA_H
 
 
 #include "pelota.h"
 #include <Windows.h>
-#include "punto.h"
+#include "PV2D.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
 
@@ -22,21 +23,24 @@
 
 
 
+
 extern int WIDTH, HEIGHT ;
+
+
 
 class escena
 {
 
 public:
 
-	
+	pelota p;
 
 	bool baldosas;
 	
 	static escena* getAVEInstance();
 	static escena* getAVEInstance(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop);
 
-	
+
 		
 	GLdouble getxRight() const;
 	void setxRight(GLdouble);
@@ -50,7 +54,7 @@ public:
 	GLdouble getyBot() const;
 	void setyBot(GLdouble);
 
-	punto getCentro();
+	PV2D getCentro();
 
 	static	void  __cdecl resize(int newWidth, int newHeight);
 
@@ -62,7 +66,7 @@ public:
 	void draw();
 
 	
-	punto dePuertodeVistaaAVE(int,int);
+	PV2D dePuertodeVistaaAVE(int,int);
 
 	void escalacionProgresivo(GLdouble);
 
@@ -87,8 +91,8 @@ private:
 	static escena* AVE;
 	static void _AVE_deleter() { delete AVE; }
 
-
-
+	
+	
 
 	GLdouble xLeft;
 	GLdouble xRight;
