@@ -19,14 +19,17 @@ public:
 	{
 		normalXY= x.generaVector(y);
 		normalXY= normalXY.perpendicularDerecha();
+		normalXY= normalXY.normalizarVector();
 
 		std::cout << "NORMALXY EN CONSTRUCTOR!!" << normalXY.x << " " << normalXY.y << std::endl;
 
 		normalYZ = y.generaVector(z);
 		normalYZ=normalYZ.perpendicularDerecha();
+		normalYZ= normalYZ.normalizarVector();
 
 		normalZX = z.generaVector(x);
 		normalZX=normalZX.perpendicularDerecha();
+		normalZX= normalZX.normalizarVector();
 	}
 	
 

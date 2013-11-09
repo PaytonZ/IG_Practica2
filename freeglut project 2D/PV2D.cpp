@@ -79,9 +79,7 @@ GLdouble PV2D :: moduloVector()
 
 PV2D PV2D :: normalizarVector()
 {
-	return PV2D(*this * (1/moduloVector()));
-
-
+	return PV2D (x*(1/moduloVector()), y*(1/moduloVector()));
 }
 
 PV2D PV2D:: generaVector(const PV2D &p)
