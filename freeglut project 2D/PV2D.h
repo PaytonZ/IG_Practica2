@@ -26,10 +26,12 @@ public:
 
 	//Sobrecarga de operadores
 	PV2D& operator = (const PV2D &p);
-	PV2D& operator * (const int &p);
+	PV2D& operator * (const GLdouble &p);
 	PV2D& operator * (const PV2D &p);
 	PV2D& operator + (const PV2D &p);
 	PV2D& operator - (const PV2D &p);
+
+	
 
 
 	GLdouble distancia(const PV2D &punto);
@@ -40,6 +42,8 @@ public:
 	//Operaciones con vectores
 	PV2D perpendicularDerecha();
 	PV2D perpendicularIzquierda();
+	PV2D perpendicularDerechaNormalizado();
+	PV2D perpendicularIzquierdaNormalizado();
 
 	PV2D normalizarVector();
 	

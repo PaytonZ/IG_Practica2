@@ -19,35 +19,24 @@ PV2D& PV2D::operator = (const PV2D &p)
 	return *this;
 }
 
-PV2D& PV2D::operator * (const int &p)
+PV2D& PV2D::operator * (const GLdouble &p)
 {
-	 this->x *= p;
-	 this->y *= p;
 
-	 return *this;
+	 return PV2D( p * this->x  ,  p* this->y);
 }
 
 PV2D&  PV2D::operator + (const PV2D &p)
 {
-	this->x +=p.x;
-	this->y +=p.y;
-
-	return *this;
+	return PV2D( this->x + p.x ,  this->y + p.y);
 }
 PV2D&  PV2D::operator - (const PV2D &p)
 {
-	this->x -=p.x;
-	this->y -=p.y;
-
-	return *this;
+	return PV2D( this->x - p.x ,  this->y - p.y);
 }
 
 PV2D& PV2D::operator * (const PV2D &p)
 {
-	this->x *= p.x;
-	this->y *= p.y;
-
-	return *this;
+	return PV2D( this->x *p.x ,  this->y * p.y);
 }
 
 
@@ -71,6 +60,23 @@ PV2D PV2D :: perpendicularDerecha()
 {
 	return PV2D (y,-x);
 }
+
+PV2D PV2D :: perpendicularIzquierda()
+{
+	return PV2D (-y,x);
+}
+
+PV2D PV2D :: perpendicularDerechaNormalizado()
+{
+	return PV2D (y,-x).normalizarVector();
+}
+
+PV2D PV2D :: perpendicularIzquierdaNormalizado()
+{
+	return PV2D (-y,x).normalizarVector();
+}
+
+
 
 GLdouble PV2D :: moduloVector()
 {

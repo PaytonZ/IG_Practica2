@@ -17,19 +17,11 @@ public:
 
 	Triangulo(PV2D& _x,PV2D& _y,PV2D& _z): x(_x) ,y(_y) ,z(_z)
 	{
-		normalXY= x.generaVector(y);
-		normalXY= normalXY.perpendicularDerecha();
-		normalXY= normalXY.normalizarVector();
+		normalXY= x.generaVector(y).perpendicularDerechaNormalizado();
+		normalYZ = y.generaVector(z).perpendicularDerechaNormalizado();
+		normalZX = z.generaVector(x).perpendicularDerechaNormalizado();
+	
 
-		std::cout << "NORMALXY EN CONSTRUCTOR!!" << normalXY.x << " " << normalXY.y << std::endl;
-
-		normalYZ = y.generaVector(z);
-		normalYZ=normalYZ.perpendicularDerecha();
-		normalYZ= normalYZ.normalizarVector();
-
-		normalZX = z.generaVector(x);
-		normalZX=normalZX.perpendicularDerecha();
-		normalZX= normalZX.normalizarVector();
 	}
 	
 

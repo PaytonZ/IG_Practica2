@@ -10,45 +10,50 @@
 	*/
 void Triangulo::pintar()
 {
-		glBegin(GL_TRIANGLES);
+	glBegin(GL_TRIANGLES);
 
-			glVertex2d(x.x,x.y);
-			glVertex2d(y.x,y.y);
-			glVertex2d(z.x,z.y);
+	glVertex2d(x.x,x.y);
+	glVertex2d(y.x,y.y);
+	glVertex2d(z.x,z.y);
 
-		glEnd();
+	glEnd();
 
 }
 void Triangulo::pintaNormales()
 {
 	//Calculo de puntos medios
-	PV2D medioZX = PV2D((x.x+z.x) /2 , (x.y+z.y)/2)
+	PV2D medioZX = PV2D((z.x+x.x) /2 , (z.y+x.y)/2)
 		,medioXY = PV2D((x.x+y.x) /2 , (x.y+y.y)/2)
-		,medioYZ = PV2D((y.x+z.x) /2 , (y.y+y.y)/2);
+		,medioYZ = PV2D((y.x+z.x) /2 , (y.y+z.y)/2);
 
-	
-	PV2D XZ 
-		,XY = medioXY + normalXY*10
-		,YZ;
+	PV2D normalXY10 = normalXY * 10
+		,normalZX10 = normalZX * 10
+		,normalYZ10 = normalYZ * 10;
 
-	//std::cout << "MEDIOYZ " << medioYZ.x << " " << medioYZ.y << std::endl;
-	std::cout << "MEDIOXY " << medioXY.x << " " << medioXY.y << std::endl;
-	std::cout << "xy " << XY.x << " " << XY.y << std::endl;
-	//std::cout << "MEDIOZX " << medioZX.x << " " << medioZX.y << std::endl;
-	
+	PV2D ZX = medioZX + normalZX10
+		,XY = medioXY + normalXY10
+		,YZ = medioYZ + normalYZ10	;
 
-	//std::cout << "Normal XY " << normalXY.x  << " " << normalXY.y << std::endl;
-	std::cout << "Punto XY " << XY.x << " " << XY.y << std::endl;
 
-	glBegin(GL_POINTS);
-		glVertex2d(medioXY.x,medioXY.y);
-		glVertex2d(XY.x,XY.y);
+
+	glBegin(GL_LINES);
+	glVertex2d(medioXY.x,medioXY.y);
+	glVertex2d(XY.x,XY.y);
+
+	glVertex2d(medioZX.x,medioZX.y);
+	glVertex2d(ZX.x,ZX.y);
+
+	glVertex2d(medioYZ.x,medioYZ.y);
+	glVertex2d(YZ.x,YZ.y);
+
+
+
 
 
 	glEnd();
-	
 
-	
+
+
 }
 
 

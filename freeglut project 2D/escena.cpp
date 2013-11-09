@@ -222,7 +222,7 @@ void escena::display()
 
 	Triangulo t(x,y,z);
 
-	//t.pintar();
+	t.pintar();
 	t.pintaNormales();
 
 
