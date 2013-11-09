@@ -51,3 +51,33 @@ PV2D PV2D :: perpendicularDerecha()
 	return PV2D (y,-x);
 }
 
+PV2D PV2D :: sumaPuntoVector (PV2D v)
+{
+	return PV2D (x+v.x,y+v.y);
+}
+
+PV2D PV2D :: sumaVectores (PV2D v)
+{
+	return PV2D (x+v.x,y+v.y);
+}
+
+PV2D PV2D :: restaVectores (PV2D v)
+{
+	return PV2D (x-v.x,y-v.y);
+}
+
+PV2D PV2D :: multiplicaVectorNumero (GLint n)
+{
+	return PV2D (x*n,y*n);
+}
+
+GLdouble PV2D :: moduloVector()
+{
+	return sqrt(x*x+y*y);
+}
+
+PV2D PV2D :: normalizarVector()
+{
+	return multiplicaVectorNumero(moduloVector());
+}
+

@@ -13,7 +13,6 @@
 const int SEGMENTOS_CIRCULO=200;
 
 #include "PV2D.h"
-#include "escena.h"
 
 class pelota
 {
