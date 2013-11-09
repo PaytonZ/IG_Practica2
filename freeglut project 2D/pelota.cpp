@@ -1,5 +1,6 @@
 #include "pelota.h"
 #include <cmath>
+#include <iostream>
 
 	void pelota::pintar()
 	{
@@ -21,5 +22,9 @@
 		glEnd();
 			
 	}
-
+	void pelota::step()
+	{
+		centro = centro +direccion;
+		
+	}
 

@@ -1,18 +1,25 @@
-﻿Compilación iniciada a las 09/11/2013 15:42:39.
-     1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
+﻿Compilación iniciada a las 09/11/2013 17:40:06.
+     1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica2\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt PV2D.cpp
-         PV2D.cpp
-     1>c:\users\david\documents\github\ig_practica2\freeglut project 2d\pv2d.cpp(81): warning C4244: 'argumento' : conversión de 'GLdouble' a 'GLint'; posible pérdida de datos
+         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Triangulo.cpp controlador.cpp escena.cpp main.cpp
+         main.cpp
+     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\main.cpp(36): warning C4305: 'argumento' : truncamiento de 'double' a 'GLfloat'
+         escena.cpp
+         controlador.cpp
+         Triangulo.cpp
+         Generando código...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\IG_Practica2\Debug\IG Practica 2.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\David\Documents\GitHub\IG_Practica2\freeglut\lib\ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\IG_Practica2\Debug\IG Practica 2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\IG_Practica2\Debug\IG Practica 2.lib" /MACHINE:X86 Debug\controlador.obj
+         E:\programas\Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.lib" /MACHINE:X86 Debug\Circulo.obj
+         Debug\controlador.obj
          Debug\escena.obj
          Debug\main.obj
+         Debug\Obstaculo.obj
          Debug\pelota.obj
          Debug\PV2D.obj
-         freeglut project 2D.vcxproj -> C:\Users\David\Documents\GitHub\IG_Practica2\Debug\IG Practica 2.exe
-     1>Compilación del proyecto terminada "C:\Users\David\Documents\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Build destinos).
+         Debug\Triangulo.obj
+         freeglut project 2D.vcxproj -> E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.exe
+     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Build destinos).
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:01.62
+Tiempo transcurrido 00:00:04.07

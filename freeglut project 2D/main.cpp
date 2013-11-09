@@ -16,6 +16,7 @@
 
 
 
+
 // Freeglut parameters
 // Flag telling us to keep processing events
 // bool continue_in_main_loop= true; //(**)
@@ -75,6 +76,8 @@ int main(int argc, char *argv[]){
 
 	inicio();
 	
+	
+
 	
 
 

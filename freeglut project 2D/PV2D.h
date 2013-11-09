@@ -23,26 +23,26 @@ public:
 	PV2D(GLdouble newx , GLdouble newy): x(newx), y(newy){}
 	PV2D(): x(0),y(0){}
 	
+
+	//Sobrecarga de operadores
 	PV2D& operator = (const PV2D &p);
+	PV2D& operator * (const int &p);
+	PV2D& operator * (const PV2D &p);
+	PV2D& operator + (const PV2D &p);
+	PV2D& operator - (const PV2D &p);
+
+
+	GLdouble distancia(const PV2D &punto);
+	bool estaCerca(const PV2D&,const GLdouble&);
+	PV2D generaVector(const PV2D& punto);
+	GLdouble productoEscalar (const PV2D &vector);
 	
-	GLdouble distancia(PV2D punto);
-	bool estaCerca(PV2D,GLdouble);
-	PV2D generaVector(PV2D punto);
-	GLdouble productoEscalar (PV2D vector);
-	
+	//Operaciones con vectores
 	PV2D perpendicularDerecha();
 	PV2D perpendicularIzquierda();
 
 	PV2D normalizarVector();
-
-	PV2D sumaPuntoVector(PV2D vector);
 	
-	PV2D sumaVectores(PV2D vector);
-
-	PV2D restaVectores( PV2D vector);
-
-	PV2D multiplicaVectorNumero( GLint numero);
-
 	GLdouble moduloVector ();
 
 

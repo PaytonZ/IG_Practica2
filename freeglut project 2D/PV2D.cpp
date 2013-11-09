@@ -19,14 +19,46 @@ PV2D& PV2D::operator = (const PV2D &p)
 	return *this;
 }
 
-GLdouble PV2D::distancia(PV2D p)
+PV2D& PV2D::operator * (const int &p)
+{
+	 this->x *= p;
+	 this->y *= p;
+
+	 return *this;
+}
+
+PV2D&  PV2D::operator + (const PV2D &p)
+{
+	this->x +=p.x;
+	this->y +=p.y;
+
+	return *this;
+}
+PV2D&  PV2D::operator - (const PV2D &p)
+{
+	this->x -=p.x;
+	this->y -=p.y;
+
+	return *this;
+}
+
+PV2D& PV2D::operator * (const PV2D &p)
+{
+	this->x *= p.x;
+	this->y *= p.y;
+
+	return *this;
+}
+
+
+GLdouble PV2D::distancia(const PV2D &p)
 {
 	return sqrt(pow((x - p.x),2.0)+
 		pow((y - p.y),2.0));
 }
 
 
-bool PV2D ::estaCerca(PV2D p, GLdouble e)
+bool PV2D ::estaCerca(const PV2D &p, const GLdouble &e)
 {
 	GLdouble a= pow(x-p.x,2);
 	GLdouble b= pow(y-p.y,2);
@@ -35,49 +67,24 @@ bool PV2D ::estaCerca(PV2D p, GLdouble e)
 
 
 }
-
-PV2D PV2D:: generaVector(PV2D p)
-{
-	return PV2D (p.x-x,p.y-y);
-}
-
-GLdouble PV2D:: productoEscalar(PV2D p)
-{
-	return (x*p.x+y*p.y);
-}
-
 PV2D PV2D :: perpendicularDerecha()
 {
 	return PV2D (y,-x);
 }
 
-PV2D PV2D :: sumaPuntoVector (PV2D v)
-{
-	return PV2D (x+v.x,y+v.y);
-}
-
-PV2D PV2D :: sumaVectores (PV2D v)
-{
-	return PV2D (x+v.x,y+v.y);
-}
-
-PV2D PV2D :: restaVectores (PV2D v)
-{
-	return PV2D (x-v.x,y-v.y);
-}
-
-PV2D PV2D :: multiplicaVectorNumero (GLint n)
-{
-	return PV2D (x*n,y*n);
-}
-
 GLdouble PV2D :: moduloVector()
 {
-	return sqrt(x*x+y*y);
+	return sqrt(pow(x,2)+pow(y,2));
 }
 
 PV2D PV2D :: normalizarVector()
 {
-	return multiplicaVectorNumero(moduloVector());
+	return PV2D(*this * (1/moduloVector()));
+
+
 }
 
+PV2D PV2D:: generaVector(const PV2D &p)
+{
+ return PV2D (p.x-x,p.y-y);
+}

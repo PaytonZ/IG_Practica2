@@ -47,6 +47,9 @@ void controlador::key(unsigned char key, int x, int y){
 		escena::getAVEInstance()->escalacionProgresivo(0.7);
 		break;
 
+	case 'm' : 
+		escena::getAVEInstance()->balon->step();
+		break;
 	
 	default:
 		need_redisplay = false;

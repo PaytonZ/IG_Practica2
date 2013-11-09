@@ -214,10 +214,17 @@ void escena::display()
 {
 	glClear( GL_COLOR_BUFFER_BIT );
 
-	PV2D c=escena::getAVEInstance()->getCentro();
-	pelota p = pelota(c,c,20);
-	p.pintar();
+	//escena::getAVEInstance()->balon->pintar();
 	
+	PV2D x (50,50)
+		,y (100,50)
+		,z (70,100);
+
+	Triangulo t(x,y,z);
+
+	t.pintar();
+	t.pintaNormales();
+
 
 	glFlush();
 	glutSwapBuffers();

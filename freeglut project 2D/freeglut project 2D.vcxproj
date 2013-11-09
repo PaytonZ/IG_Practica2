@@ -120,17 +120,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circulo.cpp" />
     <ClCompile Include="controlador.cpp" />
     <ClCompile Include="escena.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="pelota.cpp" />
     <ClCompile Include="PV2D.cpp" />
+    <ClCompile Include="Triangulo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circulo.h" />
     <ClInclude Include="controlador.h" />
     <ClInclude Include="escena.h" />
+    <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="pelota.h" />
     <ClInclude Include="PV2D.h" />
+    <ClInclude Include="Triangulo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

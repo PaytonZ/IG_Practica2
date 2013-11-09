@@ -18,7 +18,7 @@
 #include "PV2D.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
-
+#include "Triangulo.h"
 
 
 
@@ -33,14 +33,14 @@ class escena
 
 public:
 
-	pelota p;
+	pelota *balon;
 
 	bool baldosas;
 	
 	static escena* getAVEInstance();
 	static escena* getAVEInstance(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop);
 
-
+	Triangulo *superior , *lateralIzq, *lateralDch, *inferior;
 		
 	GLdouble getxRight() const;
 	void setxRight(GLdouble);
@@ -61,11 +61,9 @@ public:
 	void translacionX(GLdouble);
 	void translacionY(GLdouble);
 	void escalacion(GLdouble);
-
-
-	void draw();
-
 	
+	void draw();
+		
 	PV2D dePuertodeVistaaAVE(int,int);
 
 	void escalacionProgresivo(GLdouble);
@@ -77,23 +75,20 @@ public:
 	void drawEscene();
 
 	void activarDesActivarBaldosas();
-
-
-
-
-
+		
 private:
 
 	escena() {}
 	escena(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop):
-		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {}
+		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {
+		balon=new pelota();
+
+			
+	}
 
 	static escena* AVE;
 	static void _AVE_deleter() { delete AVE; }
-
-	
-	
-
+			
 	GLdouble xLeft;
 	GLdouble xRight;
 
