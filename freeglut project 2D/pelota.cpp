@@ -22,9 +22,5 @@
 		glEnd();
 			
 	}
-	void pelota::step()
-	{
-		centro = centro +direccion;
-		
-	}
+	
 

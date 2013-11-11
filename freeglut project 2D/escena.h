@@ -75,6 +75,8 @@ public:
 	void drawEscene();
 
 	void activarDesActivarBaldosas();
+
+	void step();
 		
 private:
 
@@ -82,6 +84,8 @@ private:
 	escena(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop):
 		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {
 		balon=new pelota();
+		
+
 
 			
 	}

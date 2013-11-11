@@ -30,20 +30,21 @@ public:
 	PV2D& operator * (const PV2D &p);
 	PV2D& operator + (const PV2D &p);
 	PV2D& operator - (const PV2D &p);
-
-	
+	PV2D& operator / (const GLdouble &p);
 
 
 	GLdouble distancia(const PV2D &punto);
 	bool estaCerca(const PV2D&,const GLdouble&);
 	PV2D generaVector(const PV2D& punto);
-	GLdouble productoEscalar (const PV2D &vector);
+	//GLdouble productoEscalar (const PV2D &vector);
 	
 	//Operaciones con vectores
 	PV2D perpendicularDerecha();
 	PV2D perpendicularIzquierda();
 	PV2D perpendicularDerechaNormalizado();
 	PV2D perpendicularIzquierdaNormalizado();
+
+	GLdouble productoEscalar(const PV2D &p);
 
 	PV2D normalizarVector();
 	

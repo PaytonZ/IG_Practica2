@@ -21,22 +21,31 @@ PV2D& PV2D::operator = (const PV2D &p)
 
 PV2D& PV2D::operator * (const GLdouble &p)
 {
+	return *(new PV2D(p * this->x  ,  p* this->y));
 
-	 return PV2D( p * this->x  ,  p* this->y);
 }
-
-PV2D&  PV2D::operator + (const PV2D &p)
+PV2D&  PV2D::operator + (const PV2D &p) 
 {
-	return PV2D( this->x + p.x ,  this->y + p.y);
+	return *(new PV2D( this->x + p.x ,  this->y + p.y));
 }
 PV2D&  PV2D::operator - (const PV2D &p)
 {
-	return PV2D( this->x - p.x ,  this->y - p.y);
+	return *( new PV2D( this->x - p.x ,  this->y - p.y));
 }
 
 PV2D& PV2D::operator * (const PV2D &p)
 {
-	return PV2D( this->x *p.x ,  this->y * p.y);
+	return *(new PV2D( this->x *p.x ,  this->y * p.y));
+}
+
+GLdouble PV2D::productoEscalar(const PV2D &p)
+{
+	return (x*p.x+y*p.y);
+}
+
+PV2D& PV2D::operator / (const GLdouble &p)
+{
+	return *(new PV2D ( this->x / p , this->y / p));
 }
 
 

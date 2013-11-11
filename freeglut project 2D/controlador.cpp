@@ -48,7 +48,7 @@ void controlador::key(unsigned char key, int x, int y){
 		break;
 
 	case 'm' : 
-		escena::getAVEInstance()->balon->step();
+		escena::getAVEInstance()->step();
 		break;
 	
 	default:

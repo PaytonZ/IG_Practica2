@@ -19,6 +19,97 @@ void Triangulo::pintar()
 	glEnd();
 
 }
+
+ bool Triangulo::interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
+{
+	//Paso 1 para cada vertice calcular
+	// distancia y proyeccion sobre v y vt
+	PV2D* vertices[] = { &x, &y ,&z };
+	PV2D* normales[] = {&normalXY, &normalYZ, &normalZX};
+	PV2D* normalCentroaP[] = { &normalCentroaX, &normalCentroaY , &normalCentroaZ } ;
+	GLdouble distancia[3] , proyecion[3];
+	GLdouble sumatorio=0;
+	int signo[3];
+	int numHits=0;
+	GLdouble hit[3];
+	PV2D* normalesResultado[3];
+
+
+	for(int i=0; i < 3 ; i ++)
+	{
+		PV2D vectorPaR=p->centro.generaVector(*vertices[i]) ;
+		distancia[i]= vectorPaR.productoEscalar(p->direccion.perpendicularIzquierdaNormalizado());
+		proyecion[i]= vectorPaR.productoEscalar(p->direccion);
+		
+		if(distancia[i] > 0) signo[i]=1;
+		else if (distancia[i] == 0 ) signo[i]=0;
+		else signo[i]=-1;
+
+		sumatorio+=signo[i];
+
+		
+	}
+
+	if( abs(sumatorio) == 3) return false;
+
+	
+	//Paso 2 para cada arista pi , ni que interseque con la recta r , calculamos
+	// el instance de corte
+
+	for(int i=0; i < 3 ; i++)
+	{
+		int j = (i+1)%3;
+		if((signo[i]*signo[j]) < 0) 
+		{
+			GLdouble num  = (proyecion[i] * distancia[j]) - (distancia[i] *proyecion[j]);
+			GLdouble denom = distancia[j] - distancia[i];
+			hit[numHits] = num / denom;
+			normalesResultado[numHits] = normales[i];
+			numHits++;
+		}
+
+	}
+		if (numHits < 2 )
+	{
+		for(int i=0; i < 3 ; i++)
+		{
+			if(signo[i]==0)
+			{
+			hit[numHits] = proyecion[i];
+			normalesResultado[numHits]= normalCentroaP[i];
+			numHits++;
+			}
+		}
+	}
+
+
+	//Paso 3 para cada vertice pi que este sobre la recta calculamenos el instance corte 
+
+
+		double min = hit[0];
+		int indicemenor=0;
+
+		for(int i=1; i < numHits ; i++)
+		{
+			if(min > hit[i])
+			{
+				min = hit[i];
+				indicemenor=i;
+			}
+
+		}
+
+
+		tIn = hit[indicemenor];
+		normalIn = normalesResultado [indicemenor];
+
+		return true;
+
+
+
+ }
+
+
 void Triangulo::pintaNormales()
 {
 	//Calculo de puntos medios

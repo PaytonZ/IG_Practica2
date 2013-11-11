@@ -21,6 +21,7 @@ public:
 	PV2D centro;
 	PV2D direccion;
 	GLdouble radio;
+	GLdouble velocidad;
 
 	//punto(GLdouble newx , GLdouble newy): x(newx), y(newy){}
 
@@ -35,7 +36,8 @@ public:
 	pelota(){
 		centro = PV2D(100,100);
 		radio = 20;
-		direccion = PV2D(2.5,2.1);
+		direccion = PV2D(2.5,2.1).normalizarVector();
+		velocidad = 2;
 
 	}
 	pelota(PV2D _centro,PV2D _direccion, GLdouble _radio) : centro(_centro), direccion(_direccion) , radio(_radio){}
