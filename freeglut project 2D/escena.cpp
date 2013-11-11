@@ -277,9 +277,13 @@ void escena::step()
 	//recorrer lista de objetos
 
 
+	GLdouble tin;
+	PV2D *p;
 
-
-
+	if(superior->interseccion(balon,tin,p))
+	{
+		std::cout << "INTER!" << std::endl;
+	}
 
 
 

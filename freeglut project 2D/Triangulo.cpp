@@ -39,7 +39,7 @@ void Triangulo::pintar()
 	{
 		PV2D vectorPaR=p->centro.generaVector(*vertices[i]) ;
 		distancia[i]= vectorPaR.productoEscalar(p->direccion.perpendicularIzquierdaNormalizado());
-		proyecion[i]= vectorPaR.productoEscalar(p->direccion);
+		proyecion[i]= vectorPaR.productoEscalar(p->direccion);  
 		
 		if(distancia[i] > 0) signo[i]=1;
 		else if (distancia[i] == 0 ) signo[i]=0;
