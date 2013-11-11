@@ -220,9 +220,10 @@ void escena::display()
 		,y (100,50)
 		,z (70,100);
 
-	escena::getAVEInstance()->superior = new Triangulo (x,y,z);
+	escena::getAVEInstance()->superior = new Triangulo (x*4,y*4,z*4);
 
-
+	escena::getAVEInstance()->superior->pintar();
+	escena::getAVEInstance()->superior->pintaNormales();
 	
 
 
@@ -275,14 +276,25 @@ void escena::activarDesActivarBaldosas(){
 void escena::step()
 {
 	//recorrer lista de objetos
-
-
+	
 	GLdouble tin;
 	PV2D *p;
+
+	//std::cout << "entering step... " << std::endl;
 
 	if(superior->interseccion(balon,tin,p))
 	{
 		std::cout << "INTER!" << std::endl;
+		std::cout << "Tin valor:" << tin << std::endl;
+		std::cout << "valor de p! :" << p->x << "-" << p->y << std::endl;
+
+		if(tin <= balon->velocidad && tin >=0)
+		{
+			
+			balon->direccion=*p;
+			std::cout << "direccion nueva: " << balon->direccion.x << "-" << balon->direccion.y << std::endl;
+		}
+
 	}
 
 

@@ -5,7 +5,7 @@ class Obstaculo
 {
 public:
 	
-	//virtual bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);
+	virtual bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn)=0;
 
 };
 

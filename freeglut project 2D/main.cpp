@@ -26,7 +26,7 @@ int WIDTH= 1000, HEIGHT= 500;
 
 
 // Scene visible area size
-GLdouble xLeft= 0.0, xRight= 500.0, yBot= 0.0, yTop= 250.0;
+GLdouble xLeft= 0.0, xRight= 1000.0, yBot= 0.0, yTop= 500.0;
 
 
 

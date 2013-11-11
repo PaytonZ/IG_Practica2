@@ -34,10 +34,10 @@ public:
 	}*/
 
 	pelota(){
-		centro = PV2D(100,100);
+		centro = PV2D(100,350);
 		radio = 20;
-		direccion = PV2D(2.5,2.1).normalizarVector();
-		velocidad = 2;
+		direccion = PV2D(2,0).normalizarVector();
+		velocidad = 10;
 
 	}
 	pelota(PV2D _centro,PV2D _direccion, GLdouble _radio) : centro(_centro), direccion(_direccion) , radio(_radio){}

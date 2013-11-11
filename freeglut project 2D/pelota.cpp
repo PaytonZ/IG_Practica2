@@ -4,6 +4,12 @@
 
 	void pelota::pintar()
 	{
+		glBegin(GL_POINTS);
+
+			glVertex2d(centro.x,centro.y);
+
+		glEnd();
+
 
 		glBegin(GL_LINE_LOOP);
 
