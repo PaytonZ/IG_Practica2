@@ -3,8 +3,8 @@
 #include "PV2D.h"
 #include <iostream>
 
-class Triangulo //:
-	//public Obstaculo
+class Triangulo :
+	public Obstaculo
 {
 public:
 	//Anotacion

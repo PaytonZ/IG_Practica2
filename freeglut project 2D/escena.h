@@ -19,6 +19,7 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 #include "Triangulo.h"
+#include "Lista.h"
 
 
 
@@ -34,8 +35,9 @@ class escena
 public:
 
 	pelota *balon;
-
 	bool baldosas;
+	Lista<Triangulo*> lista_de_obstaculos;
+
 	
 	static escena* getAVEInstance();
 	static escena* getAVEInstance(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop);
@@ -84,14 +86,24 @@ private:
 	escena(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop):
 		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {
 		balon=new pelota();
+		superior= new Triangulo(PV2D(xLeft-1000,yTop),PV2D(xRight+1000,yTop),PV2D(xRight/2,yTop+50));
+
+		PV2D x (50,50)
+		,y (100,50)
+		,z (70,100);
+
+		inferior = new Triangulo (x*4,y*4,z*4);
+
+		lista_de_obstaculos.ponDr(superior);
+		lista_de_obstaculos.ponDr(inferior);
+
 		
-
-
 			
 	}
 
 	static escena* AVE;
-	static void _AVE_deleter() { delete AVE; }
+	static void _AVE_deleter() { 
+	delete AVE; }
 			
 	GLdouble xLeft;
 	GLdouble xRight;

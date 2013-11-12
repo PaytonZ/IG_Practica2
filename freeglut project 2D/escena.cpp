@@ -216,14 +216,16 @@ void escena::display()
 
 	escena::getAVEInstance()->balon->pintar();
 	
-	PV2D x (50,50)
-		,y (100,50)
-		,z (70,100);
+	Lista<Triangulo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos.principio();
 
-	escena::getAVEInstance()->superior = new Triangulo (x*4,y*4,z*4);
+	while(iteratorObs != escena::getAVEInstance()->lista_de_obstaculos.final())
+	{
+		Triangulo* t = iteratorObs.elem();
+		t->pintar();
+		t->pintaNormales();
+		iteratorObs.avanza();
 
-	escena::getAVEInstance()->superior->pintar();
-	escena::getAVEInstance()->superior->pintaNormales();
+	}
 	
 
 
@@ -277,26 +279,44 @@ void escena::step()
 {
 	//recorrer lista de objetos
 	
-	GLdouble tin;
+	GLdouble tin=INT_MAX;
 	PV2D *p;
 
-	//std::cout << "entering step... " << std::endl;
+	GLdouble min;
+	PV2D *diraux;
 
-	if(superior->interseccion(balon,tin,p))
+
+	Lista<Triangulo*>::Iterador iteratorObs = lista_de_obstaculos.principio();
+
+	while(iteratorObs != lista_de_obstaculos.final())
 	{
-		std::cout << "INTER!" << std::endl;
-		std::cout << "Tin valor:" << tin << std::endl;
-		std::cout << "valor de p! :" << p->x << "-" << p->y << std::endl;
+		Triangulo* t = iteratorObs.elem();
 
-		if(tin <= balon->velocidad && tin >=0)
+		if(t->interseccion(balon,min,diraux))
 		{
-			
-			balon->direccion=*p;
-			std::cout << "direccion nueva: " << balon->direccion.x << "-" << balon->direccion.y << std::endl;
+
+		std::cout << "INTER!" << std::endl;
+		std::cout << "Tin valor:" << min << std::endl;
+		std::cout << "valor de p! :" << diraux->x << "-" << diraux->y << std::endl;
+			if(min < tin && min >= 0) 
+			{
+				tin = min;
+				p= new PV2D (diraux->x , diraux->y);
+
+
+			}
 		}
 
+		iteratorObs.avanza();
 	}
 
+	//}
+
+	if(tin <= balon->velocidad && tin >=0)
+	{
+			
+			balon->direccion=*p;
+	}
 
 
 	//avanzar

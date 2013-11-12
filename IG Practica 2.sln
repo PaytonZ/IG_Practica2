@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freeglut project 2D", "freeglut project 2D\freeglut project 2D.vcxproj", "{8C29A969-64B0-434E-84B7-474EDCA5F26A}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IG Practica 2", "freeglut project 2D\freeglut project 2D.vcxproj", "{8C29A969-64B0-434E-84B7-474EDCA5F26A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89FCDBBD-C60F-4E55-BB7E-CFDC4DF77D84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

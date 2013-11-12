@@ -133,6 +133,8 @@
     <ClInclude Include="Circulo.h" />
     <ClInclude Include="controlador.h" />
     <ClInclude Include="escena.h" />
+    <ClInclude Include="Excepciones.h" />
+    <ClInclude Include="Lista.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="pelota.h" />
     <ClInclude Include="PV2D.h" />

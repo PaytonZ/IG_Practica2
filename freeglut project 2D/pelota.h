@@ -36,7 +36,7 @@ public:
 	pelota(){
 		centro = PV2D(100,350);
 		radio = 20;
-		direccion = PV2D(2,0).normalizarVector();
+		direccion = PV2D(1,0).normalizarVector();
 		velocidad = 10;
 
 	}
