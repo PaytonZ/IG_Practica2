@@ -10,7 +10,7 @@
 #ifndef PELOTA_H
 #define PELOTA_H
 
-const int SEGMENTOS_CIRCULO=200;
+const int SEGMENTOS_CIRCULO=20;
 const int M_PI= 3.1415926535897932384626433832795;
 
 #include "PV2D.h"
@@ -32,16 +32,25 @@ public:
 		radio = 20;
 		direccion = PV2D(1,0).normalizarVector();
 		velocidad = 10;
+		GLdouble alfa=360/SEGMENTOS_CIRCULO;
+		GLdouble beta= (M_PI-alfa)/2;
+		GLdouble lado= 2*radio*cos(beta);
 		lapiz l(centro,0.0);
+		l.forward(radio,false);
+		l.dir=beta;
 		for(int i=0; i < SEGMENTOS_CIRCULO ; i++)
 		{
-			GLdouble angulo = (i * 2*M_PI) / SEGMENTOS_CIRCULO;
+			l.forward(lado,false);
+			l.turnTo(beta);
+			circulo[i]= new PV2D(l.pos.x,l.pos.y);
+			/*GLdouble angulo = (i * 2*M_PI) / SEGMENTOS_CIRCULO;
 			GLdouble x= radio * cos(angulo);
 			GLdouble y= radio * sin(angulo);
 
 			l.moveTo(PV2D(centro.x+x,centro.y+y),false);
 
-			circulo[i]= new PV2D(l.pos.x,l.pos.y);
+			circulo[i]= new PV2D(l.pos.x,l.pos.y);*/
+
 		}
 
 

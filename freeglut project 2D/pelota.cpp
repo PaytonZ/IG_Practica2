@@ -26,6 +26,11 @@
 		}
 
 		glEnd();
+
+		/*glBegin(GL_POLYGON);
+			for (int i=0; i<SEGMENTOS_CIRCULO; i++)
+				glVertex2d(circulo[i]->x,circulo[i]->y);
+		glEnd;*/
 			
 	}
 	
