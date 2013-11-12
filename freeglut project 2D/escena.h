@@ -87,15 +87,22 @@ private:
 		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {
 		balon=new pelota();
 		superior= new Triangulo(PV2D(xLeft-1000,yTop),PV2D(xRight+1000,yTop),PV2D(xRight/2,yTop+50));
+		lateralIzq = new Triangulo(PV2D(xLeft-250,yBot-1000),PV2D(xLeft-250,yTop+1000),PV2D(xLeft-350,yTop/2));
+		inferior = new Triangulo(PV2D (xLeft-1000,yBot),PV2D(xRight/2,yBot-50),PV2D(xRight+1000,yBot));
+		lateralDch = new Triangulo(PV2D(xRight-250,yBot-1000),PV2D(xRight+350,yTop/2),PV2D(xRight-250,yTop+1000));
 
 		PV2D x (50,50)
 		,y (100,50)
 		,z (70,100);
 
-		inferior = new Triangulo (x*4,y*4,z*4);
+		Triangulo* obs1 = new Triangulo (x*4,y*4,z*4);
 
 		lista_de_obstaculos.ponDr(superior);
 		lista_de_obstaculos.ponDr(inferior);
+		lista_de_obstaculos.ponDr(lateralIzq);
+		lista_de_obstaculos.ponDr(lateralDch);
+
+		lista_de_obstaculos.ponDr(obs1);
 
 		
 			
