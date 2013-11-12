@@ -315,7 +315,7 @@ void escena::step()
 	if(tin <= balon->velocidad && tin >=0)
 	{
 			
-			balon->direccion=*p;
+		balon->rebote(p);
 	}
 
 

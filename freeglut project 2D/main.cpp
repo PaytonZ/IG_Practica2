@@ -77,16 +77,11 @@ int main(int argc, char *argv[]){
 	inicio();
 	
 	
-
-	
-
-
 	//Inicializacion de mi AVE implementada con singleton
 	escena::getAVEInstance(xLeft,yBot,xRight,yTop);
 
 	int my_window; //my window's identifier
 
-	
 	//Initialization
 	glutInitWindowSize(WIDTH, HEIGHT);
 	glutInitWindowPosition (140, 140);

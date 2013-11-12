@@ -32,8 +32,7 @@ public:
 
 	}
 	
-
-
+	
 	
 	PV2D x,y,z;
 	PV2D normalXY,normalZX,normalYZ;
@@ -42,7 +41,7 @@ public:
 
 	void pintar();
 	void pintaNormales();
-	bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);
+	virtual	bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);
 	
 
 };

@@ -123,8 +123,8 @@
     <ClCompile Include="Circulo.cpp" />
     <ClCompile Include="controlador.cpp" />
     <ClCompile Include="escena.cpp" />
+    <ClCompile Include="lapiz.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="pelota.cpp" />
     <ClCompile Include="PV2D.cpp" />
     <ClCompile Include="Triangulo.cpp" />
@@ -134,6 +134,7 @@
     <ClInclude Include="controlador.h" />
     <ClInclude Include="escena.h" />
     <ClInclude Include="Excepciones.h" />
+    <ClInclude Include="lapiz.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="pelota.h" />

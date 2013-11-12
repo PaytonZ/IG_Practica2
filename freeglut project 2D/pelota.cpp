@@ -30,3 +30,9 @@
 	}
 	
 
+	void pelota::rebote(PV2D* normal){
+
+		
+		direccion = direccion + *normal*2.0;
+		direccion = direccion.normalizarVector();
+	}
