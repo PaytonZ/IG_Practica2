@@ -39,6 +39,11 @@ public:
 	PV2D normalCentroaX, normalCentroaY, normalCentroaZ;
 	PV2D baricentro;
 
+	Triangulo* creaTrianguloArriba(GLdouble radio);
+	Triangulo* creaTrianguloAbajo(GLdouble radio);
+	Triangulo* creaTrianguloDerecha(GLdouble radio);
+	Triangulo* creaTrianguloDerechaInv(GLdouble radio);
+	Triangulo* creaTrianguloIzquierda(GLdouble radio);
 	void pintar();
 	void pintaNormales();
 	virtual	bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);

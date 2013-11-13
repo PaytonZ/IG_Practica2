@@ -155,4 +155,52 @@ void Triangulo::pintaNormales()
 
 }
 
+Triangulo* Triangulo:: creaTrianguloAbajo(GLdouble radio)
+{
+	PV2D puntoX = PV2D(x.x,x.y-radio);
+	PV2D puntoY = PV2D(y.x,y.y-radio);
+	PV2D puntoZ = PV2D((x.x+y.x)/2, (x.y+y.y)/2);
+
+	return new Triangulo(puntoX,puntoY,puntoZ);
+}
+
+Triangulo* Triangulo:: creaTrianguloDerecha(GLdouble radio)
+{
+	PV2D puntoX = PV2D((y.x+z.x)/2,(y.y+z.y)/2);
+	PV2D puntoY = PV2D(y.x+radio,y.y);
+	PV2D puntoZ = PV2D(z.x+radio,z.y);
+
+	return new Triangulo(puntoX,puntoY,puntoZ);
+}
+
+Triangulo* Triangulo:: creaTrianguloDerechaInv(GLdouble radio)
+{
+	PV2D puntoX = PV2D(x.x+radio,x.y);
+	PV2D puntoY = PV2D(y.x+radio,y.y);
+	PV2D puntoZ = PV2D((y.x+x.x)/2,(y.y+x.y)/2);
+
+	return new Triangulo(puntoX,puntoY,puntoZ);
+}
+
+Triangulo* Triangulo:: creaTrianguloIzquierda(GLdouble radio)
+{
+	PV2D puntoX = PV2D(x.x-radio,x.y);
+	PV2D puntoY = PV2D((x.x+z.x)/2,(x.y+z.y)/2);
+	PV2D puntoZ = PV2D(z.x-radio,z.y);
+
+	return new Triangulo(puntoX,puntoY,puntoZ);
+}
+
+
+
+Triangulo* Triangulo:: creaTrianguloArriba(GLdouble radio)
+{
+	PV2D puntoX = PV2D((z.x+y.x)/2, (z.y+y.y)/2);
+	PV2D puntoY = PV2D(y.x,y.y+radio);
+	PV2D puntoZ = PV2D(z.x,z.y+radio);
+
+	return new Triangulo(puntoX,puntoY,puntoZ);
+}
+
+
 

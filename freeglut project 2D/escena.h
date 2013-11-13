@@ -37,6 +37,7 @@ public:
 	pelota *balon;
 	bool baldosas;
 	Lista<Triangulo*> lista_de_obstaculos;
+	Lista<Triangulo*> lista_de_obstaculos_pintar;
 
 	
 	static escena* getAVEInstance();
@@ -87,8 +88,8 @@ private:
 		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {
 		balon=new pelota();
 		superior= new Triangulo(PV2D(xLeft-1000,yTop),PV2D(xRight+1000,yTop),PV2D(xRight/2,yTop+50));
-		lateralIzq = new Triangulo(PV2D(xLeft-250,yBot-1000),PV2D(xLeft-250,yTop+1000),PV2D(xLeft-350,yTop/2));
-		inferior = new Triangulo(PV2D (xLeft-1000,yBot),PV2D(xRight/2,yBot-50),PV2D(xRight+1000,yBot));
+		lateralIzq = new Triangulo(PV2D(xLeft-350,yTop/2),PV2D(xLeft-250,yBot-1000),PV2D(xLeft-250,yTop+1000));
+		inferior = new Triangulo(PV2D(xRight/2,yBot-50),PV2D(xRight+1000,yBot),PV2D (xLeft-1000,yBot));
 		lateralDch = new Triangulo(PV2D(xRight-250,yBot-1000),PV2D(xRight+350,yTop/2),PV2D(xRight-250,yTop+1000));
 
 		PV2D x (50,50)
@@ -96,15 +97,45 @@ private:
 		,z (70,100);
 
 		Triangulo* obs1 = new Triangulo (x*4,y*4,z*4);
+		Triangulo* obs2 = new Triangulo (PV2D (0,80), PV2D (100,300),PV2D(-100,300) );
 
-		lista_de_obstaculos.ponDr(superior);
-		lista_de_obstaculos.ponDr(inferior);
-		lista_de_obstaculos.ponDr(lateralIzq);
-		lista_de_obstaculos.ponDr(lateralDch);
+		//lista_de_obstaculos.ponDr(superior);
+		//lista_de_obstaculos_pintar.ponDr(inferior);
+		//lista_de_obstaculos.ponDr(lateralIzq);
+		//lista_de_obstaculos.ponDr(lateralDch);
 
-		lista_de_obstaculos.ponDr(obs1);
+		lista_de_obstaculos_pintar.ponDr(obs1);
+		lista_de_obstaculos_pintar.ponDr(obs2);
 
-		
+		//Triangulos obs2
+		lista_de_obstaculos.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
+		lista_de_obstaculos.ponDr(obs2->creaTrianguloIzquierda(balon->radio));		
+		lista_de_obstaculos.ponDr(obs2->creaTrianguloArriba(balon->radio));
+
+		//Triangulos obs1
+		lista_de_obstaculos.ponDr(obs1->creaTrianguloDerecha(balon->radio));
+		lista_de_obstaculos.ponDr(obs1->creaTrianguloIzquierda(balon->radio));		
+		lista_de_obstaculos.ponDr(obs1->creaTrianguloAbajo(balon->radio));
+
+		//Triangulo superior
+		//lista_de_obstaculos.ponDr(superior->creaTrianguloDerecha(balon->radio));
+		//lista_de_obstaculos.ponDr(superior->creaTrianguloIzquierda(balon->radio));		
+		lista_de_obstaculos.ponDr(superior->creaTrianguloAbajo(balon->radio));
+
+		// Triangulo inferior
+		//lista_de_obstaculos.ponDr(inferior->creaTrianguloDerecha(balon->radio));
+		//lista_de_obstaculos.ponDr(inferior->creaTrianguloIzquierda(balon->radio));
+		lista_de_obstaculos.ponDr(inferior->creaTrianguloArriba(balon->radio));
+
+		//Triangulo izquierda
+		lista_de_obstaculos.ponDr(lateralIzq->creaTrianguloDerecha(balon->radio));
+		//lista_de_obstaculos.ponDr(lateralIzq->creaTrianguloArriba(balon->radio));
+		//lista_de_obstaculos.ponDr(lateralIzq->creaTrianguloAbajo(balon->radio));
+
+		//Triangulo derecha
+		lista_de_obstaculos.ponDr(lateralDch->creaTrianguloIzquierda(balon->radio));
+		//lista_de_obstaculos.ponDr(lateralDch->creaTrianguloArriba(balon->radio));
+		//lista_de_obstaculos.ponDr(lateralDch->creaTrianguloAbajo(balon->radio));
 			
 	}
 

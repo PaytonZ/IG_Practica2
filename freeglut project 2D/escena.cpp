@@ -216,9 +216,9 @@ void escena::display()
 
 	escena::getAVEInstance()->balon->pintar();
 	
-	Lista<Triangulo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos.principio();
+	Lista<Triangulo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos_pintar.principio();
 
-	while(iteratorObs != escena::getAVEInstance()->lista_de_obstaculos.final())
+	while(iteratorObs != escena::getAVEInstance()->lista_de_obstaculos_pintar.final())
 	{
 		Triangulo* t = iteratorObs.elem();
 		t->pintar();
