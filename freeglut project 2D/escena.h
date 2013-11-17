@@ -20,6 +20,7 @@
 #include <gl/GLU.h>
 #include "Triangulo.h"
 #include "Lista.h"
+#include "Circulo.h"
 
 
 
@@ -36,8 +37,8 @@ public:
 
 	pelota *balon;
 	bool baldosas;
-	Lista<Triangulo*> lista_de_obstaculos;
-	Lista<Triangulo*> lista_de_obstaculos_pintar;
+	Lista<Obstaculo*> lista_de_obstaculos;
+	Lista<Obstaculo*> lista_de_obstaculos_pintar;
 
 	
 	static escena* getAVEInstance();
@@ -99,6 +100,8 @@ private:
 		Triangulo* obs1 = new Triangulo (x*4,y*4,z*4);
 		Triangulo* obs2 = new Triangulo (PV2D (0,80), PV2D (100,300),PV2D(-100,300) );
 
+		Circulo* obs3 = new Circulo (PV2D (-100,yTop-30), 50);
+
 		//lista_de_obstaculos.ponDr(superior);
 		//lista_de_obstaculos_pintar.ponDr(inferior);
 		//lista_de_obstaculos.ponDr(lateralIzq);
@@ -106,6 +109,10 @@ private:
 
 		lista_de_obstaculos_pintar.ponDr(obs1);
 		lista_de_obstaculos_pintar.ponDr(obs2);
+		lista_de_obstaculos_pintar.ponDr(obs3);
+
+		//Intersecion obs3
+		lista_de_obstaculos.ponDr(obs3);
 
 		//Triangulos obs2
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
@@ -116,6 +123,8 @@ private:
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloDerecha(balon->radio));
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloIzquierda(balon->radio));		
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloAbajo(balon->radio));
+
+		
 
 		//Triangulo superior
 		//lista_de_obstaculos.ponDr(superior->creaTrianguloDerecha(balon->radio));

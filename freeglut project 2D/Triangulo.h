@@ -44,8 +44,8 @@ public:
 	Triangulo* creaTrianguloDerecha(GLdouble radio);
 	Triangulo* creaTrianguloDerechaInv(GLdouble radio);
 	Triangulo* creaTrianguloIzquierda(GLdouble radio);
-	void pintar();
-	void pintaNormales();
+	virtual void pintar();
+	virtual void pintaNormales();
 	virtual	bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);
 	
 

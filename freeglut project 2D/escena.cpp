@@ -216,11 +216,11 @@ void escena::display()
 
 	escena::getAVEInstance()->balon->pintar();
 	
-	Lista<Triangulo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos_pintar.principio();
+	Lista<Obstaculo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos_pintar.principio();
 
 	while(iteratorObs != escena::getAVEInstance()->lista_de_obstaculos_pintar.final())
 	{
-		Triangulo* t = iteratorObs.elem();
+		Obstaculo* t = iteratorObs.elem();
 		t->pintar();
 		t->pintaNormales();
 		iteratorObs.avanza();
@@ -286,11 +286,11 @@ void escena::step()
 	PV2D *diraux;
 
 
-	Lista<Triangulo*>::Iterador iteratorObs = lista_de_obstaculos.principio();
+	Lista<Obstaculo*>::Iterador iteratorObs = lista_de_obstaculos.principio();
 
 	while(iteratorObs != lista_de_obstaculos.final())
 	{
-		Triangulo* t = iteratorObs.elem();
+		Obstaculo* t = iteratorObs.elem();
 
 		if(t->interseccion(balon,min,diraux))
 		{

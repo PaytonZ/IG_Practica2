@@ -1,16 +1,10 @@
-﻿Compilación iniciada a las 13/11/2013 22:43:57.
+﻿Compilación iniciada a las 17/11/2013 12:04:34.
      1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica2\freeglut\include\ /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Circulo.cpp Triangulo.cpp controlador.cpp escena.cpp main.cpp pelota.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica2\freeglut\include\ /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Circulo.cpp
          Circulo.cpp
-         Triangulo.cpp
-         controlador.cpp
-         escena.cpp
-         main.cpp
-     1>main.cpp(36): warning C4305: 'argumento' : truncamiento de 'double' a 'GLfloat'
-         pelota.cpp
-     1>pelota.cpp(21): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
-     1>pelota.cpp(22): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>Circulo.cpp(29): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>Circulo.cpp(30): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\IG_Practica2\Release\IG Practica 2.exe" /NOLOGO /LIBPATH:C:\Users\David\Documents\GitHub\IG_Practica2\freeglut\lib\ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\IG_Practica2\Release\IG Practica 2.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\IG_Practica2\Release\IG Practica 2.lib" /MACHINE:X86 /SAFESEH Release\Circulo.obj
          Release\controlador.obj
@@ -27,4 +21,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:06.36
+Tiempo transcurrido 00:00:01.93
