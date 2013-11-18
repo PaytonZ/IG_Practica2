@@ -51,6 +51,9 @@ void controlador::key(unsigned char key, int x, int y){
 		glFlush();
 		escena::getAVEInstance()->step();
 		break;
+	case 'd' : 
+		escena::getAVEInstance()->cambiarPenetracion();
+		break;
 	
 	default:
 		need_redisplay = false;

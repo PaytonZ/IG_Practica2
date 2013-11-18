@@ -286,30 +286,34 @@ void escena::step()
 	GLdouble min;
 	PV2D *diraux;
 
+	
+		Lista<Obstaculo*>::Iterador iteratorObs= lista_de_obstaculos.principio();
+		if(!penetracion)
+			iteratorObs = lista_de_obstaculos_pintar.principio();
 
-	Lista<Obstaculo*>::Iterador iteratorObs = lista_de_obstaculos.principio();
-
-	while(iteratorObs != lista_de_obstaculos.final())
-	{
-		Obstaculo* t = iteratorObs.elem();
-
-		if(t->interseccion(balon,min,diraux))
+		while(iteratorObs != lista_de_obstaculos.final())
 		{
+			Obstaculo* t = iteratorObs.elem();
 
-		std::cout << "INTER!" << std::endl;
-		std::cout << "Tin valor:" << min << std::endl;
-		std::cout << "valor de p! :" << diraux->x << "-" << diraux->y << std::endl;
-			if(min < tin && min >= 0) 
+			if(t->interseccion(balon,min,diraux))
 			{
-				tin = min;
-				p= new PV2D (diraux->x , diraux->y);
-				inter=true;
 
+			std::cout << "INTER!" << std::endl;
+			std::cout << "Tin valor:" << min << std::endl;
+			std::cout << "valor de p! :" << diraux->x << "-" << diraux->y << std::endl;
+				if(min < tin && min >= 0) 
+				{
+					tin = min;
+					p= new PV2D (diraux->x , diraux->y);
+					inter=true;
+
+				}
 			}
-		}
 
-		iteratorObs.avanza();
-	}
+			iteratorObs.avanza();
+		}
+	
+	
 
 	balon->avanzar(tin);
 
@@ -319,10 +323,9 @@ void escena::step()
 			
 		balon->rebote(p);
 	}
+}
 
-
-	
-
-	
-
+void escena:: cambiarPenetracion()
+{
+	penetracion=!penetracion;
 }

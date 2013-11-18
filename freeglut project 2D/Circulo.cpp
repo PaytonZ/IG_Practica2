@@ -37,13 +37,11 @@ void Circulo::pintar()
 bool Circulo:: interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 {
 	GLdouble A=p->direccion.productoEscalar(p->direccion);
-	PV2D CP = p->centro.generaVector(c);
+	PV2D CP = c.generaVector(p->centro);
 	GLdouble B= 2*(CP.productoEscalar(p->direccion));
 	GLdouble C= CP.productoEscalar(CP)-radio*radio;
 	GLdouble disc= B*B -4*A*C;
 
-	std::cout << "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO" << disc << std::endl;
-	std::cout << "disc" << disc << std::endl;
 
 	if (disc<0)
 		return false;
@@ -55,7 +53,6 @@ bool Circulo:: interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 	{
 		GLdouble t1= (-B-sqrt(disc))/2*A;
 		GLdouble t2= (-B+sqrt(disc))/2*A;
-		std::cout << "valor de t1 y t2 :" << t1 << " - " << t2 << std::endl;
 		if (t1>t2)
 			tIn=t2;
 		else
@@ -70,4 +67,9 @@ bool Circulo:: interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 void Circulo::pintaNormales()
 {
 
+}
+
+Circulo* Circulo:: crearCirculoMasGrande( GLdouble tamExtra)
+{
+	return new Circulo (c,radio+tamExtra);
 }
