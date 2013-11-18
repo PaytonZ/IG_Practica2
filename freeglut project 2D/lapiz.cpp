@@ -9,7 +9,7 @@
 #include "lapiz.h"
 #include "PV2D.h"
 #include <cmath>
-const int M_PI = 3.1415926535897932384626433832795;
+const GLdouble M_PI = 3.1415926535897932384626433832795;
 
 
 
@@ -36,9 +36,9 @@ void lapiz::turnTo(GLdouble a)
 void lapiz::forward(GLdouble dist,bool draw )
 {
 	PV2D nuevo_punto ;
-
-	nuevo_punto.x= pos.x + dist*cos(M_PI*dir/180.0);
-	nuevo_punto.y= pos.y + dist*sin(M_PI*dir/180.0);
+	GLdouble asd=M_PI*dir/180.00;
+	nuevo_punto.x= pos.x + dist*cos(asd);
+	nuevo_punto.y= pos.y + dist*sin(asd);
 
 
 

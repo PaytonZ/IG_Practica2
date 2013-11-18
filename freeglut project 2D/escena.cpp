@@ -279,8 +279,9 @@ void escena::step()
 {
 	//recorrer lista de objetos
 	
-	GLdouble tin=INT_MAX;
+	GLdouble tin=balon->velocidad;
 	PV2D *p;
+	bool inter=false;
 
 	GLdouble min;
 	PV2D *diraux;
@@ -302,7 +303,7 @@ void escena::step()
 			{
 				tin = min;
 				p= new PV2D (diraux->x , diraux->y);
-
+				inter=true;
 
 			}
 		}
@@ -310,17 +311,18 @@ void escena::step()
 		iteratorObs.avanza();
 	}
 
-	//}
+	balon->avanzar(tin);
 
-	if(tin <= balon->velocidad && tin >=0)
+
+	if(inter)
 	{
 			
 		balon->rebote(p);
 	}
 
 
-	//avanzar
+	
 
-	balon->centro= balon->centro + (balon->direccion* balon->velocidad);
+	
 
 }

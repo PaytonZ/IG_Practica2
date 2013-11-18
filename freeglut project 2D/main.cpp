@@ -19,10 +19,14 @@
 
 // Freeglut parameters
 // Flag telling us to keep processing events
-// bool continue_in_main_loop= true; //(**)
+// bool continue_in_main_leoop= true; //(**)
 
 // Viewport size
 int WIDTH= 1000, HEIGHT= 500;
+
+
+const GLdouble EPSILON = pow(10,-6);
+
 
 
 // Scene visible area size
@@ -56,7 +60,6 @@ void intitGL(){
 
 
 
-
 void inicio()
 {
 	std::cout<< "Starting ..." << std::endl;
@@ -67,7 +70,7 @@ void inicio()
 		<< "Flechas - Exploracion de la escena" << std::endl
 		<< "O / P - zoom progresivo de la escena "<< std::endl
 		<< "--------------------------------------"<< std::endl ;
-	
+
 }
 
 
@@ -75,8 +78,8 @@ int main(int argc, char *argv[]){
 
 
 	inicio();
-	
-	
+
+
 	//Inicializacion de mi AVE implementada con singleton
 	escena::getAVEInstance(xLeft,yBot,xRight,yTop);
 
@@ -101,7 +104,7 @@ int main(int argc, char *argv[]){
 	//OpenGL basic setting
 	intitGL();
 
-	
+
 	// Freeglut's main loop can be stopped executing (**)
 	//while ( continue_in_main_loop )
 	//  glutMainLoopEvent();

@@ -48,6 +48,7 @@ void controlador::key(unsigned char key, int x, int y){
 		break;
 
 	case 'm' : 
+		glFlush();
 		escena::getAVEInstance()->step();
 		break;
 	

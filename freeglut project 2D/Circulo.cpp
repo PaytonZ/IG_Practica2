@@ -4,8 +4,6 @@
 
 
 
-
-
 Circulo::~Circulo(void)
 {
 }
@@ -43,6 +41,9 @@ bool Circulo:: interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 	GLdouble B= 2*(CP.productoEscalar(p->direccion));
 	GLdouble C= CP.productoEscalar(CP)-radio*radio;
 	GLdouble disc= B*B -4*A*C;
+
+	std::cout << "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO" << disc << std::endl;
+	std::cout << "disc" << disc << std::endl;
 
 	if (disc<0)
 		return false;

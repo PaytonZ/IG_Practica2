@@ -113,36 +113,45 @@ private:
 
 		//Intersecion obs3
 		lista_de_obstaculos.ponDr(obs3);
+		lista_de_obstaculos_pintar.ponDr(obs3);
 
 		//Triangulos obs2
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloIzquierda(balon->radio));		
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloArriba(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs2->creaTrianguloIzquierda(balon->radio));	
+		lista_de_obstaculos_pintar.ponDr(obs2->creaTrianguloArriba(balon->radio));
 
 		//Triangulos obs1
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloDerecha(balon->radio));
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloIzquierda(balon->radio));		
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloAbajo(balon->radio));
-
+		lista_de_obstaculos_pintar.ponDr(obs1->creaTrianguloDerecha(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs1->creaTrianguloIzquierda(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs1->creaTrianguloAbajo(balon->radio));
 		
 
 		//Triangulo superior
 		//lista_de_obstaculos.ponDr(superior->creaTrianguloDerecha(balon->radio));
 		//lista_de_obstaculos.ponDr(superior->creaTrianguloIzquierda(balon->radio));		
 		lista_de_obstaculos.ponDr(superior->creaTrianguloAbajo(balon->radio));
-
+		lista_de_obstaculos_pintar.ponDr(superior->creaTrianguloAbajo(balon->radio));
 		// Triangulo inferior
 		//lista_de_obstaculos.ponDr(inferior->creaTrianguloDerecha(balon->radio));
 		//lista_de_obstaculos.ponDr(inferior->creaTrianguloIzquierda(balon->radio));
 		lista_de_obstaculos.ponDr(inferior->creaTrianguloArriba(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(inferior->creaTrianguloArriba(balon->radio));
 
 		//Triangulo izquierda
 		lista_de_obstaculos.ponDr(lateralIzq->creaTrianguloDerecha(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(lateralIzq->creaTrianguloDerecha(balon->radio));
 		//lista_de_obstaculos.ponDr(lateralIzq->creaTrianguloArriba(balon->radio));
 		//lista_de_obstaculos.ponDr(lateralIzq->creaTrianguloAbajo(balon->radio));
 
 		//Triangulo derecha
 		lista_de_obstaculos.ponDr(lateralDch->creaTrianguloIzquierda(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(lateralDch->creaTrianguloIzquierda(balon->radio));
 		//lista_de_obstaculos.ponDr(lateralDch->creaTrianguloArriba(balon->radio));
 		//lista_de_obstaculos.ponDr(lateralDch->creaTrianguloAbajo(balon->radio));
 			

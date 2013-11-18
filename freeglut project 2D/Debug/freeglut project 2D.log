@@ -1,37 +1,5 @@
-﻿Compilación iniciada a las 11/11/2013 19:54:19.
-     1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Rebuild destinos).
-     1>ClCompile:
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Circulo.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Circulo.cpp
-         Circulo.cpp
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\controlador.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet controlador.cpp
-         controlador.cpp
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\escena.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet escena.cpp
-         escena.cpp
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\main.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet main.cpp
-         main.cpp
-     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\main.cpp(36): warning C4305: 'argumento' : truncamiento de 'double' a 'GLfloat'
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Obstaculo.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Obstaculo.cpp
-         Obstaculo.cpp
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\pelota.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet pelota.cpp
-         pelota.cpp
-     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\pelota.cpp(21): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
-     1>e:\mis documentos\github\ig_practica2\freeglut project 2d\pelota.cpp(22): warning C4244: 'argumento' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\PV2D.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet PV2D.cpp
-         PV2D.cpp
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D CODE_ANALYSIS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze /analyze:log "Debug\Triangulo.cpp.nativecodeanalysis.xml" /analyze:pluginlocalespc.dll /errorReport:prompt   /analyze:quiet Triangulo.cpp
-         Triangulo.cpp
-       Link:
-         E:\programas\Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.lib" /MACHINE:X86 Debug\Circulo.obj
-         Debug\controlador.obj
-         Debug\escena.obj
-         Debug\main.obj
-         Debug\Obstaculo.obj
-         Debug\pelota.obj
-         Debug\PV2D.obj
-         Debug\Triangulo.obj
-         freeglut project 2D.vcxproj -> E:\Mis Documentos\GitHub\IG_Practica2\Debug\IG Practica 2.exe
-     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Rebuild destinos).
+﻿Compilación iniciada a las 18/11/2013 14:30:55.
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:42.59
+Tiempo transcurrido 00:00:00
