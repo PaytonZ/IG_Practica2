@@ -49,7 +49,7 @@ void controlador::key(unsigned char key, int x, int y){
 
 	case 'm' : 
 		glFlush();
-		escena::getAVEInstance()->step();
+		escena::getAVEInstance()->step(0);
 		break;
 	case 'd' : 
 		escena::getAVEInstance()->cambiarPenetracion();

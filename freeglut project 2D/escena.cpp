@@ -229,6 +229,8 @@ void escena::display()
 	
 
 
+
+
 	glFlush();
 	glutSwapBuffers();
 
@@ -275,7 +277,7 @@ void escena::activarDesActivarBaldosas(){
 	}
 }
 
-void escena::step()
+void escena::step(int value)
 {
 	//recorrer lista de objetos
 	
@@ -298,9 +300,9 @@ void escena::step()
 			if(t->interseccion(balon,min,diraux))
 			{
 
-			std::cout << "INTER!" << std::endl;
+		/*	std::cout << "INTER!" << std::endl;
 			std::cout << "Tin valor:" << min << std::endl;
-			std::cout << "valor de p! :" << diraux->x << "-" << diraux->y << std::endl;
+			std::cout << "valor de p! :" << diraux->x << "-" << diraux->y << std::endl;*/
 				if(min < tin && min >= 0) 
 				{
 					tin = min;
@@ -323,9 +325,17 @@ void escena::step()
 			
 		balon->rebote(p);
 	}
+	
+
 }
 
 void escena:: cambiarPenetracion()
 {
 	penetracion=!penetracion;
+}
+
+void escena::stepaux(int a)
+{
+	std::cout << "entre?" ;
+	escena::getAVEInstance()->step(0);
 }

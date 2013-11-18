@@ -81,9 +81,11 @@ public:
 
 	void activarDesActivarBaldosas();
 
-	void step();
+	void step(int);
 
 	void cambiarPenetracion();
+
+	static void stepaux(int);
 		
 private:
 

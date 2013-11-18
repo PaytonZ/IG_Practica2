@@ -100,6 +100,7 @@ int main(int argc, char *argv[]){
 	glutMouseFunc(controlador::key);
 	glutSpecialFunc(controlador::key);
 	glutDisplayFunc(escena::display);
+	glutTimerFunc(20,escena::stepaux,0);
 
 	//OpenGL basic setting
 	intitGL();
@@ -112,6 +113,8 @@ int main(int argc, char *argv[]){
 	// Classic glut's main loop can be stopped after X-closing the window,
 	// using the following freeglut's setting (*)
 	glutSetOption ( GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION ) ;
+
+		
 
 	// Classic glut's main loop can be stopped in freeglut using (*)
 	glutMainLoop(); 
