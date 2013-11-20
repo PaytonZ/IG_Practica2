@@ -1,13 +1,21 @@
+/********************************************************************************
+*																				*
+*		Practica 2 IG - Pelota maligna 											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #include "Triangulo.h"
 #include <iostream>
 
 //Anotacion
-	/*        z
-			  /\
-			 /	\        
-			/____\
-		   x      y
-	*/
+/*        z
+/\
+/	\        
+/____\
+x      y
+*/
 void Triangulo::pintar()
 {
 	glBegin(GL_LINE_LOOP);
@@ -34,29 +42,24 @@ bool Triangulo::interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 	GLdouble hit[3];
 	PV2D* normalesResultado[3];
 
-	std::cout << "------------------------" << std::endl;
+
 
 	for(int i=0; i < 3 ; i ++)
 	{
 		PV2D vectorPaR=p->centro.generaVector(*vertices[i]) ;
 		distancia[i]= vectorPaR.productoEscalar(p->direccion.perpendicularIzquierdaNormalizado());
 		proyecion[i]= vectorPaR.productoEscalar(p->direccion);  
-	
 
-		std::cout << "DISTACNIA DE I" << distancia[i] << std::endl;
-		
-		if(distancia[i] > 0) signo[i]=1;
-		else if (distancia[i] == 0 ) signo[i]=0;
+		if(distancia[i] > EPSILON) signo[i]=1;
+		else if (abs(distancia[i]) <= EPSILON ) signo[i]=0;
 		else signo[i]=-1;
 
 		sumatorio+=signo[i];
 
-		
 	}
-	std::cout << "sumatorio: " << sumatorio << std::endl;
+
 	if( abs(sumatorio) == 3) return false;
 
-	
 	//Paso 2 para cada arista pi , ni que interseque con la recta r , calculamos
 	// el instance de corte
 
@@ -73,45 +76,39 @@ bool Triangulo::interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 		}
 
 	}
-		if (numHits < 2 )
+	if (numHits < 2 )
 	{
 		for(int i=0; i < 3 ; i++)
 		{
 			if(signo[i]==0)
 			{
-			hit[numHits] = proyecion[i];
-			normalesResultado[numHits]= normalCentroaP[i];
-			numHits++;
+				hit[numHits] = proyecion[i];
+				normalesResultado[numHits]= normalCentroaP[i];
+				numHits++;
 			}
 		}
 	}
-
-
 	//Paso 3 para cada vertice pi que este sobre la recta calculamenos el instance corte 
 
+	double min = hit[0];
+	int indicemenor=0;
 
-		double min = hit[0];
-		int indicemenor=0;
-
-		for(int i=1; i < numHits ; i++)
+	for(int i=1; i < numHits ; i++)
+	{
+		if(min > hit[i])
 		{
-			if(min > hit[i])
-			{
-				min = hit[i];
-				indicemenor=i;
-			}
-
+			min = hit[i];
+			indicemenor=i;
 		}
 
+	}
 
-		tIn = hit[indicemenor];
-		normalIn = normalesResultado [indicemenor];
+	tIn = hit[indicemenor];
+	normalIn = normalesResultado [indicemenor];
 
-		return true;
+	return true;
 
-
-
- }
+}
 
 
 void Triangulo::pintaNormales()
@@ -130,7 +127,6 @@ void Triangulo::pintaNormales()
 		,YZ = medioYZ + normalYZ10	;
 
 
-
 	glBegin(GL_LINES);
 	glVertex2d(medioXY.x,medioXY.y);
 	glVertex2d(XY.x,XY.y);
@@ -141,15 +137,10 @@ void Triangulo::pintaNormales()
 	glVertex2d(medioYZ.x,medioYZ.y);
 	glVertex2d(YZ.x,YZ.y);
 
-
-
-
-
 	glEnd();
 
-
 	glBegin(GL_POINTS);
-		glVertex2d(baricentro.x,baricentro.y);
+	glVertex2d(baricentro.x,baricentro.y);
 	glEnd();
 
 

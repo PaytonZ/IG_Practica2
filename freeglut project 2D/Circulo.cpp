@@ -1,38 +1,31 @@
+/********************************************************************************
+*																				*
+*		Practica 2 IG - Pelota maligna 											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #include "Circulo.h"
 
 #include <iostream>
 
 
 
-Circulo::~Circulo(void)
-{
-}
-
 void Circulo::pintar()
-{
-	glBegin(GL_POINTS);
+	{
+		glBegin(GL_POINTS);
 
 			glVertex2d(c.x,c.y);
 
 		glEnd();
 
-
 		glBegin(GL_LINE_LOOP);
-
-		for(int i = 0; i < SEGMENTOS_CIRCULO ; i++) 
-
-	{ 
-		GLdouble theta = 2.0 * 3.1415926 * GLdouble(i) / GLdouble(SEGMENTOS_CIRCULO);//get the current angle 
-
-		GLdouble x = radio *  GLdouble(cosf(theta));//calculate the x component 
-		GLdouble y = radio *  GLdouble(sinf(theta));//calculate the y component 
-
-		glVertex2d(x + c.x, y + c.y);//output vertex 
-
-		}
-
+			for (int i=0; i<SEGMENTOS_CIRCULO; i++)
+				glVertex2d(circulo[i]->x,circulo[i]->y);
 		glEnd();
-}
+			
+	}
 
 bool Circulo:: interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 {
@@ -43,9 +36,9 @@ bool Circulo:: interseccion(pelota *p,double &tIn ,PV2D*& normalIn)
 	GLdouble disc= B*B -4*A*C;
 
 
-	if (disc<0)
+	if (disc<EPSILON)
 		return false;
-	else if (disc==0)
+	else if (abs(disc) <=EPSILON)
 	{
 		tIn=-B/(2*A);
 	}

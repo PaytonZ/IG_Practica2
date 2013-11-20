@@ -16,6 +16,7 @@
 
 extern int WIDTH, HEIGHT;
 escena* escena::AVE = NULL;
+extern const unsigned int timer;
 
 GLdouble escena::getxRight() const{
 	return xRight;
@@ -299,10 +300,6 @@ void escena::step(int value)
 
 			if(t->interseccion(balon,min,diraux))
 			{
-
-		/*	std::cout << "INTER!" << std::endl;
-			std::cout << "Tin valor:" << min << std::endl;
-			std::cout << "valor de p! :" << diraux->x << "-" << diraux->y << std::endl;*/
 				if(min < tin && min >= 0) 
 				{
 					tin = min;
@@ -336,6 +333,10 @@ void escena:: cambiarPenetracion()
 
 void escena::stepaux(int a)
 {
-	std::cout << "entre?" ;
+
+	glutTimerFunc(timer,escena::stepaux,0);
+
 	escena::getAVEInstance()->step(0);
+
+	 glutPostRedisplay();    
 }

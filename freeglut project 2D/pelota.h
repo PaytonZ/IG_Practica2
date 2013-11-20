@@ -1,6 +1,6 @@
 /********************************************************************************
 *																				*
-*		Practica 2 IG - Pythagoras tree											*
+*		Practica 2 IG - Pelota maligna 											*
 *		Autores:	David Garcia Alvarez										*
 *					Juan Luis Perez Valbuena									*
 *																				*
@@ -44,23 +44,22 @@ public:
 			l.forward(lado,false);
 			l.turnTo(alfa);
 			circulo[i]= new PV2D(l.pos.x,l.pos.y);
-			/*GLdouble angulo = (i * 2*M_PI) / SEGMENTOS_CIRCULO;
-			GLdouble x= radio * cos(angulo);
-			GLdouble y= radio * sin(angulo);
-
-			l.moveTo(PV2D(centro.x+x,centro.y+y),false);
-
-			circulo[i]= new PV2D(l.pos.x,l.pos.y);*/
-
+			
 		}
 
 
 
 	}
 	pelota(PV2D _centro,PV2D _direccion, GLdouble _radio) : centro(_centro), direccion(_direccion) , radio(_radio){}
+	~pelota()
+	{
+		for(int i=0; i < SEGMENTOS_CIRCULO ; i++)
+		{
+			delete circulo[i];
+		}
+	}
 
 	void pintar();
-	//void step();
 	void rebote(PV2D* normal);
 	void avanzar(const GLdouble &avance);
 

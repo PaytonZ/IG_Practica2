@@ -1,22 +1,5 @@
-﻿Compilación iniciada a las 18/11/2013 20:50:56.
-     1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
-     1>ClCompile:
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt escena.cpp
-         escena.cpp
-       Link:
-         E:\programas\Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.exe" /NOLOGO /LIBPATH:"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.lib" /MACHINE:X86 /SAFESEH Release\Circulo.obj
-         Release\controlador.obj
-         Release\escena.obj
-         Release\lapiz.obj
-         Release\main.obj
-         Release\pelota.obj
-         Release\PV2D.obj
-         Release\Triangulo.obj
-         Generando código
-         Generación de código finalizada
-         freeglut project 2D.vcxproj -> E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.exe
-     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Build destinos).
+﻿Compilación iniciada a las 20/11/2013 11:47:40.
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:01.48
+Tiempo transcurrido 00:00:00.01

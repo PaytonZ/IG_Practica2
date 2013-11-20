@@ -1,7 +1,16 @@
+
+
 #pragma once
+#ifndef TRIANGULO_H
+#define TRIANGULO_H
 #include "obstaculo.h"
 #include "PV2D.h"
 #include <iostream>
+#include <gl/GL.h>
+#include <gl/GLU.h>
+#include <GL/freeglut.h>
+
+extern const GLdouble EPSILON;
 
 class Triangulo :
 	public Obstaculo
@@ -51,3 +60,4 @@ public:
 
 };
 
+#endif

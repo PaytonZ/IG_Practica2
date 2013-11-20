@@ -28,7 +28,7 @@
 
 extern int WIDTH, HEIGHT ;
 
-
+extern const unsigned int timer;
 
 class escena
 {

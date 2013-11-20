@@ -1,6 +1,6 @@
 /********************************************************************************
 *																				*
-*		Practica 1 IG - Pythagoras tree											*
+*		Practica 2 IG - Pelota maligna 											*
 *		Autores:	David Garcia Alvarez										*
 *					Juan Luis Perez Valbuena									*
 *																				*
@@ -23,9 +23,11 @@
 
 // Viewport size
 int WIDTH= 1000, HEIGHT= 500;
-
+const unsigned int timer=35;
 
 const GLdouble EPSILON = pow(10,-6);
+
+
 
 
 
@@ -54,7 +56,11 @@ void intitGL(){
 	glLoadIdentity();
 
 	escena *escena_principal= escena::getAVEInstance();
-	gluOrtho2D(escena_principal->getxLeft(), escena_principal->getxRight(), escena_principal->getyBot(), escena_principal->getyTop()); 
+	gluOrtho2D(escena_principal->getxLeft(), escena_principal->getxRight(), escena_principal->getyBot(), escena_principal->getyTop());
+
+	glutTimerFunc(timer,escena::stepaux,0);
+
+
 }
 
 
@@ -100,7 +106,7 @@ int main(int argc, char *argv[]){
 	glutMouseFunc(controlador::key);
 	glutSpecialFunc(controlador::key);
 	glutDisplayFunc(escena::display);
-	glutTimerFunc(20,escena::stepaux,0);
+	
 
 	//OpenGL basic setting
 	intitGL();

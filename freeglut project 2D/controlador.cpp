@@ -17,7 +17,6 @@
 
 extern int WIDTH, HEIGHT;
 extern GLdouble TAM_CUADRADO;
-extern GLdouble EPSILON;
 extern GLdouble ANGULO;
 
 void controlador::key(unsigned char key, int x, int y){

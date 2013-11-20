@@ -1,4 +1,7 @@
 #pragma once
+#ifndef OBSTACULO_H
+#define OBSTACULO_H
+
 #include "pelota.h"
 #include "PV2D.h"
 class Obstaculo
@@ -11,3 +14,4 @@ public:
 
 };
 
+#endif
