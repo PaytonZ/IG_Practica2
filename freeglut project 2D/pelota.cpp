@@ -26,8 +26,12 @@ void pelota::pintar()
 }
 void pelota::rebote(PV2D* normal){
 
-	direccion = direccion + *normal*2.0;
-	direccion = direccion.normalizarVector();
+	/*direccion = direccion + *normal*2.0;
+	direccion = direccion.normalizarVector();*/
+	GLdouble asd = direccion.productoEscalar(*normal);
+	direccion.x=direccion.x-(normal->x*asd*2);
+	direccion.y=direccion.y-(normal->y*asd*2);
+	direccion=direccion.normalizarVector();
 }
 
 void pelota::avanzar(const GLdouble &avance)

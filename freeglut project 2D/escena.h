@@ -99,14 +99,18 @@ private:
 		inferior = new Triangulo(PV2D(xRight/2,yBot-50),PV2D(xRight+1000,yBot),PV2D (xLeft-1000,yBot));
 		lateralDch = new Triangulo(PV2D(xRight-250,yBot-1000),PV2D(xRight+350,yTop/2),PV2D(xRight-250,yTop+1000));
 
-		PV2D x (50,50)
-		,y (100,50)
-		,z (70,100);
+		PV2D x (50,10)
+		,y (100,10)
+		,z (70,60);
 
 		Triangulo* obs1 = new Triangulo (x*4,y*4,z*4);
 		Triangulo* obs2 = new Triangulo (PV2D (0,80), PV2D (100,300),PV2D(-100,300) );
+		Triangulo* obs5= new Triangulo (PV2D (500,50), PV2D (600,170),PV2D(400,170) );
+
 
 		Circulo* obs3 = new Circulo (PV2D (-100,yTop-30), 50);
+		Circulo* obs4 = new Circulo (PV2D (200,yBot+300), 35);
+		Circulo* obs6 = new Circulo (PV2D (xRight-350,yTop-135), 65);
 
 		lista_de_obstaculos_pintar.ponDr(superior);
 		lista_de_obstaculos_pintar.ponDr(inferior);
@@ -116,10 +120,19 @@ private:
 		lista_de_obstaculos_pintar.ponDr(obs1);
 		lista_de_obstaculos_pintar.ponDr(obs2);
 		lista_de_obstaculos_pintar.ponDr(obs3);
+		lista_de_obstaculos_pintar.ponDr(obs5);
+
+		//Circulo obs4
+		lista_de_obstaculos.ponDr(obs4->crearCirculoMasGrande(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs4);
 
 		//Intersecion obs3
 		lista_de_obstaculos.ponDr(obs3->crearCirculoMasGrande(balon->radio));
 		lista_de_obstaculos_pintar.ponDr(obs3);
+
+		//Intersecion obs6
+		lista_de_obstaculos.ponDr(obs6->crearCirculoMasGrande(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs6);
 
 		//Triangulos obs2
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
@@ -134,6 +147,21 @@ private:
 		lista_de_obstaculos.ponDr(new Circulo(obs2->x,balon->radio));
 		lista_de_obstaculos.ponDr(new Circulo(obs2->y,balon->radio));
 		lista_de_obstaculos.ponDr(new Circulo(obs2->z,balon->radio));
+
+		//Triangulo obs5
+		lista_de_obstaculos.ponDr(obs5->creaTrianguloDerechaInv(balon->radio));
+		lista_de_obstaculos.ponDr(obs5->creaTrianguloIzquierda(balon->radio));		
+		lista_de_obstaculos.ponDr(obs5->creaTrianguloArriba(balon->radio));
+		lista_de_obstaculos.ponDr(new Circulo(obs5->x,balon->radio));
+		lista_de_obstaculos.ponDr(new Circulo(obs5->y,balon->radio));
+		lista_de_obstaculos.ponDr(new Circulo(obs5->z,balon->radio));
+
+		/*lista_de_obstaculos_pintar.ponDr(obs5->creaTrianguloDerechaInv(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(obs5->creaTrianguloIzquierda(balon->radio));	
+		lista_de_obstaculos_pintar.ponDr(obs5->creaTrianguloArriba(balon->radio));
+		lista_de_obstaculos_pintar.ponDr(new Circulo(obs5->x,balon->radio));
+		lista_de_obstaculos_pintar.ponDr(new Circulo(obs5->y,balon->radio));
+		lista_de_obstaculos_pintar.ponDr(new Circulo(obs5->z,balon->radio));*/
 
 		//Triangulos obs1
 		lista_de_obstaculos.ponDr(obs1->creaTrianguloDerecha(balon->radio));

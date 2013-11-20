@@ -16,6 +16,8 @@ const double M_PI= 3.1415926535897932384626433832795;
 #include "PV2D.h"
 #include "lapiz.h"
 #include <cmath>
+#include<stdlib.h>
+#include <stdio.h>
 
 class pelota
 {
@@ -28,9 +30,9 @@ public:
 	PV2D* circulo[SEGMENTOS_CIRCULO];
 
 	pelota(){
-		centro = PV2D(100,350);
+		centro = PV2D(50,350);
 		radio = 20;
-		direccion = PV2D(1,0).normalizarVector();
+		direccion = PV2D(rand()%3,rand()%3).normalizarVector();
 		velocidad = 10;
 		GLdouble alfa=360.00/(GLdouble)SEGMENTOS_CIRCULO;
 		GLdouble beta= (180.00-alfa)/2;
