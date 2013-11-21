@@ -56,6 +56,9 @@ void controlador::key(unsigned char key, int x, int y){
 	case 'i' :
 		escena::getAVEInstance()->cambiarInterior();
 		break;
+	case 'q' :
+		escena::getAVEInstance()->cambiarDebug();
+		break;
 	
 	default:
 		need_redisplay = false;

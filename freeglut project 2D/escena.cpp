@@ -215,7 +215,20 @@ void escena::display()
 {
 	glClear( GL_COLOR_BUFFER_BIT );
 
-	
+	if (escena::getAVEInstance()->debug)
+	{
+
+		Lista<Obstaculo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos.principio();
+
+		while(iteratorObs != escena::getAVEInstance()->lista_de_obstaculos.final())
+		{
+			Obstaculo* t = iteratorObs.elem();
+			t->pintar(escena::getAVEInstance()->interior);
+			if (!escena::getAVEInstance()->interior)
+				t->pintaNormales();
+			iteratorObs.avanza();
+		}
+	}
 	
 	Lista<Obstaculo*>::Iterador iteratorObs = escena::getAVEInstance()->lista_de_obstaculos_pintar.principio();
 
@@ -231,6 +244,7 @@ void escena::display()
 	
 	escena::getAVEInstance()->balon->pintar(escena::getAVEInstance()->interior);
 
+	
 
 
 	glFlush();
@@ -335,6 +349,11 @@ void escena:: cambiarPenetracion()
 void escena:: cambiarInterior()
 {
 	interior=!interior;
+}
+
+void escena:: cambiarDebug()
+{
+	debug=!debug;
 }
 
 void escena::stepaux(int a)
