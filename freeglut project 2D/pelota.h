@@ -45,13 +45,14 @@ public:
 		{
 			l.forward(lado,false);
 			l.turnTo(alfa);
-			circulo[i]= new PV2D(l.pos.x,l.pos.y);
-			
+			circulo[i]= new PV2D(l.pos.x,l.pos.y);			
 		}
-
-
-
+		r=rand()%2;
+		g=rand()%2;
+		b=rand()%2;
 	}
+
+
 	pelota(PV2D _centro,PV2D _direccion, GLdouble _radio) : centro(_centro), direccion(_direccion) , radio(_radio){}
 	~pelota()
 	{
@@ -61,9 +62,14 @@ public:
 		}
 	}
 
-	void pintar();
+	void pintar(bool);
 	void rebote(PV2D* normal);
 	void avanzar(const GLdouble &avance);
+
+private:
+	GLdouble r;
+	GLdouble g;
+	GLdouble b;
 
 };
 

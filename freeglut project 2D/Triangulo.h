@@ -9,6 +9,8 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 #include <GL/freeglut.h>
+#include<stdlib.h>
+#include <stdio.h>
 
 extern const GLdouble EPSILON;
 
@@ -36,7 +38,9 @@ public:
 		normalCentroaX=baricentro.generaVector(x);
 		normalCentroaY=baricentro.generaVector(y);
 		normalCentroaZ=baricentro.generaVector(z);
-
+		r=rand()%2;
+		g=rand()%2;
+		b=rand()%2;
 	
 
 	}
@@ -53,11 +57,15 @@ public:
 	Triangulo* creaTrianguloDerecha(GLdouble radio);
 	Triangulo* creaTrianguloDerechaInv(GLdouble radio);
 	Triangulo* creaTrianguloIzquierda(GLdouble radio);
-	virtual void pintar();
+	virtual void pintar(bool);
 	virtual void pintaNormales();
 	virtual	bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);
 	
+private:
 
+	GLdouble r;
+	GLdouble g;
+	GLdouble b;
 };
 
 #endif

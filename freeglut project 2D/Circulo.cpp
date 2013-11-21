@@ -12,18 +12,30 @@
 
 
 
-void Circulo::pintar()
+void Circulo::pintar(bool interior)
 	{
-		glBegin(GL_POINTS);
+		glColor3f(r,g,b);
 
-			glVertex2d(c.x,c.y);
+		if (!interior)
+		{
+			glBegin(GL_POINTS);
 
-		glEnd();
+				glVertex2d(c.x,c.y);
 
-		glBegin(GL_LINE_LOOP);
-			for (int i=0; i<SEGMENTOS_CIRCULO; i++)
-				glVertex2d(circulo[i]->x,circulo[i]->y);
-		glEnd();
+			glEnd();
+
+			glBegin(GL_LINE_LOOP);
+				for (int i=0; i<SEGMENTOS_CIRCULO; i++)
+					glVertex2d(circulo[i]->x,circulo[i]->y);
+			glEnd();
+		}
+		else
+		{
+			glBegin(GL_POLYGON);
+				for (int i=0; i<SEGMENTOS_CIRCULO; i++)
+					glVertex2d(circulo[i]->x,circulo[i]->y);
+			glEnd();
+		}
 			
 	}
 

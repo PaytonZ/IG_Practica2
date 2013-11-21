@@ -40,6 +40,7 @@ public:
 	Lista<Obstaculo*> lista_de_obstaculos;
 	Lista<Obstaculo*> lista_de_obstaculos_pintar;
 	bool penetracion;
+	bool interior;
 
 	
 	static escena* getAVEInstance();
@@ -85,6 +86,8 @@ public:
 
 	void cambiarPenetracion();
 
+	void cambiarInterior();
+
 	static void stepaux(int);
 		
 private:
@@ -93,6 +96,7 @@ private:
 	escena(GLdouble new_xleft, GLdouble new_yBot , GLdouble new_xright, GLdouble new_yTop):
 		xLeft(new_xleft) , xRight(new_xright) ,  yBot(new_yBot) , yTop(new_yTop) {
 		penetracion=true;
+		interior=true;
 		balon=new pelota();
 		superior= new Triangulo(PV2D(xLeft-1000,yTop),PV2D(xRight+1000,yTop),PV2D(xRight/2,yTop+50));
 		lateralIzq = new Triangulo(PV2D(xLeft-350,yTop/2),PV2D(xLeft-250,yBot-1000),PV2D(xLeft-250,yTop+1000));

@@ -53,6 +53,9 @@ void controlador::key(unsigned char key, int x, int y){
 	case 'd' : 
 		escena::getAVEInstance()->cambiarPenetracion();
 		break;
+	case 'i' :
+		escena::getAVEInstance()->cambiarInterior();
+		break;
 	
 	default:
 		need_redisplay = false;

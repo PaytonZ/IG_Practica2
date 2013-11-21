@@ -16,15 +16,26 @@
 /____\
 x      y
 */
-void Triangulo::pintar()
+void Triangulo::pintar(bool interior)
 {
-	glBegin(GL_LINE_LOOP);
+	glColor3f(r,g,b);
 
-	glVertex2d(x.x,x.y);
-	glVertex2d(y.x,y.y);
-	glVertex2d(z.x,z.y);
-
-	glEnd();
+	if (!interior)
+	{
+		glBegin(GL_LINE_LOOP);
+		glVertex2d(x.x,x.y);
+		glVertex2d(y.x,y.y);
+		glVertex2d(z.x,z.y);
+		glEnd();
+	}
+	else
+	{
+		glBegin(GL_TRIANGLES);
+		glVertex2d(x.x,x.y);
+		glVertex2d(y.x,y.y);
+		glVertex2d(z.x,z.y);
+		glEnd();
+	}
 
 }
 

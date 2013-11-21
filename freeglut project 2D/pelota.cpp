@@ -10,18 +10,28 @@
 #include <cmath>
 #include <iostream>
 
-void pelota::pintar()
+void pelota::pintar(bool interior)
 {
-	glBegin(GL_POINTS);
+	glColor3f(r,g,b);
+	if (!interior)
+	{
+		
+		glBegin(GL_POINTS);
+		glVertex2d(centro.x,centro.y);
+		glEnd();
 
-	glVertex2d(centro.x,centro.y);
-
-	glEnd();
-
-	glBegin(GL_LINE_LOOP);
-	for (int i=0; i<SEGMENTOS_CIRCULO; i++)
-		glVertex2d(circulo[i]->x,circulo[i]->y);
-	glEnd();
+		glBegin(GL_LINE_LOOP);
+		for (int i=0; i<SEGMENTOS_CIRCULO; i++)
+			glVertex2d(circulo[i]->x,circulo[i]->y);
+		glEnd();
+	}
+	else
+	{
+		glBegin(GL_POLYGON);
+		for (int i=0; i<SEGMENTOS_CIRCULO; i++)
+			glVertex2d(circulo[i]->x,circulo[i]->y);
+		glEnd();
+	}
 
 }
 void pelota::rebote(PV2D* normal){

@@ -6,6 +6,8 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 #include <GL/freeglut.h>
+#include<stdlib.h>
+#include <stdio.h>
 
 extern const GLdouble EPSILON;
 
@@ -37,6 +39,10 @@ public:
 			circulo[i]= new PV2D(l.pos.x,l.pos.y);
 			
 		}
+		r=rand()%2;
+		g=rand()%2;
+		b=rand()%2;
+
 
 	}
 	~Circulo()
@@ -49,13 +55,16 @@ public:
 	}
 
 	Circulo* crearCirculoMasGrande( GLdouble tamExtra);
-	virtual void pintar();
+	virtual void pintar(bool);
 	virtual void pintaNormales();
 	virtual bool interseccion(pelota *p,double &tIn ,PV2D*& normalIn);
 
 private:
 	PV2D c;
 	GLdouble radio;
+	GLdouble r;
+	GLdouble g;
+	GLdouble b;
 };
 
 #endif
