@@ -13,6 +13,7 @@
 #include <iostream>
 #include "escena.h"
 #include "controlador.h"
+#include <time.h>       /* time */
 
 
 
@@ -75,6 +76,9 @@ void inicio()
 		<< "+ / -   -  Zooms de la Escena "<< std::endl
 		<< "Flechas - Exploracion de la escena" << std::endl
 		<< "O / P - zoom progresivo de la escena "<< std::endl
+		<< "d - cambiar modo penetracion (el centro rebota / pelota rebota )" << std::endl 
+		<< "i - activar modo debug ( se muestran las normales de los triangulos)" << std::endl 
+		<< "q - se muestra el contorno de los poligonos" << std::endl
 		<< "--------------------------------------"<< std::endl ;
 
 }
@@ -85,6 +89,7 @@ int main(int argc, char *argv[]){
 
 	inicio();
 
+	srand (time(NULL));
 
 	//Inicializacion de mi AVE implementada con singleton
 	escena::getAVEInstance(xLeft,yBot,xRight,yTop);

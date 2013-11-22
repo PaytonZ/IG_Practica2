@@ -38,9 +38,11 @@ public:
 		normalCentroaX=baricentro.generaVector(x);
 		normalCentroaY=baricentro.generaVector(y);
 		normalCentroaZ=baricentro.generaVector(z);
+		do {
 		r=rand()%2;
 		g=rand()%2;
 		b=rand()%2;
+		}while(r!=0 && g !=0 && b!=0);
 	
 
 	}

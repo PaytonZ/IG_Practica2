@@ -146,6 +146,7 @@ private:
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloIzquierda(balon->radio));		
 		lista_de_obstaculos.ponDr(obs2->creaTrianguloArriba(balon->radio));
+		
 		//lista_de_obstaculos_pintar.ponDr(obs2->creaTrianguloDerechaInv(balon->radio));
 		//lista_de_obstaculos_pintar.ponDr(obs2->creaTrianguloIzquierda(balon->radio));	
 		//lista_de_obstaculos_pintar.ponDr(obs2->creaTrianguloArriba(balon->radio));

@@ -241,7 +241,7 @@ void escena::display()
 		iteratorObs.avanza();
 
 	}
-	
+
 	escena::getAVEInstance()->balon->pintar(escena::getAVEInstance()->interior);
 
 	
