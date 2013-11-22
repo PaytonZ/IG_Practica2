@@ -1,32 +1,5 @@
-﻿Compilación iniciada a las 22/11/2013 13:04:15.
-     1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" en el nodo 2 (Build destinos).
-     1>ClCompile:
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\include\\" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Circulo.cpp Triangulo.cpp controlador.cpp escena.cpp main.cpp pelota.cpp
-         Circulo.cpp
-     1>Circulo.cpp(17): warning C4244: 'argumento' : conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
-         Triangulo.cpp
-     1>Triangulo.cpp(21): warning C4244: 'argumento' : conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
-         controlador.cpp
-         escena.cpp
-         main.cpp
-     1>main.cpp(43): warning C4305: 'argumento' : truncamiento de 'double' a 'GLfloat'
-     1>main.cpp(92): warning C4244: 'argumento' : conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-         pelota.cpp
-     1>pelota.cpp(15): warning C4244: 'argumento' : conversión de 'GLdouble' a 'GLfloat'; posible pérdida de datos
-       Link:
-         E:\programas\Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.exe" /NOLOGO /LIBPATH:"E:\Mis Documentos\GitHub\IG_Practica2\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.lib" /MACHINE:X86 /SAFESEH Release\Circulo.obj
-         Release\controlador.obj
-         Release\escena.obj
-         Release\lapiz.obj
-         Release\main.obj
-         Release\pelota.obj
-         Release\PV2D.obj
-         Release\Triangulo.obj
-         Generando código
-         Generación de código finalizada
-         freeglut project 2D.vcxproj -> E:\Mis Documentos\GitHub\IG_Practica2\Release\IG Practica 2.exe
-     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica2\freeglut project 2D\freeglut project 2D.vcxproj" (Build destinos).
+﻿Compilación iniciada a las 22/11/2013 14:53:14.
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:04.86
+Tiempo transcurrido 00:00:00.01

@@ -14,7 +14,9 @@
 
 void Circulo::pintar(bool interior)
 	{
-		glColor3f(r,g,b);
+		
+		glColor3ub(r,g,b);
+	
 
 		if (!interior)
 		{

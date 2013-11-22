@@ -1,3 +1,10 @@
+/********************************************************************************
+*																				*
+*		Practica 2 IG - Pelota maligna 											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
 #pragma once
 #ifndef CIRCULO_H
 #define CIRCULO_H
@@ -41,10 +48,10 @@ public:
 		}
 
 		do {
-		r=rand()%2;
-		g=rand()%2;
-		b=rand()%2;
-		}while(r!=0 && g !=0 && b!=0);
+		r=rand()%256;
+		g=rand()%256;
+		b=rand()%256;
+		}while(r==255 && g ==255  && b==255);
 
 	}
 	~Circulo()
@@ -64,9 +71,9 @@ public:
 private:
 	PV2D c;
 	GLdouble radio;
-	GLdouble r;
-	GLdouble g;
-	GLdouble b;
+	GLubyte r;
+	GLubyte g;
+	GLubyte b;
 };
 
 #endif

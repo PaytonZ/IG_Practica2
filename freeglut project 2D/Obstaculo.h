@@ -1,3 +1,11 @@
+/********************************************************************************
+*																				*
+*		Practica 2 IG - Pelota maligna 											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #pragma once
 #ifndef OBSTACULO_H
 #define OBSTACULO_H

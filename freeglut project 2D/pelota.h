@@ -48,10 +48,10 @@ public:
 			circulo[i]= new PV2D(l.pos.x,l.pos.y);			
 		}
 		do {
-		r=rand()%2;
-		g=rand()%2;
-		b=rand()%2;
-		}while(r!=0 && g !=0 && b!=0);
+		r=rand()%240;
+		g=rand()%240;
+		b=rand()%240;
+		}while(r==255 && g ==255  && b==255);
 	}
 
 
@@ -69,9 +69,9 @@ public:
 	void avanzar(const GLdouble &avance);
 
 private:
-	GLdouble r;
-	GLdouble g;
-	GLdouble b;
+	GLubyte r;
+	GLubyte g;
+	GLubyte b;
 
 };
 
